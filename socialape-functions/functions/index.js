@@ -17,6 +17,8 @@ const firebase = require('firebase')
 
 firebase.initializeApp(config)
 
+const db = admin.firestore()
+
 app.get('/screams', (req, res) => {
   admin
     .firestore()
