@@ -84,7 +84,7 @@ app.post('/signup', (req, res) => {
       return data.user.getIdToken()
     })
     .then((token) => {
-      return res.status(201).json({ token })
+      token = token
     })
     .catch((err) => {
       console.error(err)
