@@ -1,6 +1,6 @@
 const functions = require('firebase-functions')
 const admin = require('firebase-admin')
-
+const app = require('express')()
 admin.initializeApp()
 
 const config = {
@@ -12,9 +12,6 @@ const config = {
   messagingSenderId: '38737443979',
   appId: '1:38737443979:web:cf44f65b6140eaec7d288e',
 }
-
-const express = require('express')
-const app = express()
 
 const firebase = require('firebase')
 
