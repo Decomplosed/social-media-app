@@ -15,18 +15,17 @@ app.get('/screams', (req, res) => {
     .then((data) => {
       let screams = []
 
-      data
-        .forEach((doc) => {
-          screams.push({
-            screamId: doc.id,
-            body: doc.data().body,
-            userHandle: doc.data().userHandle,
-            createdAt: doc.data().createdAt,
-          })
-          return res.json(screams)
+      data.forEach((doc) => {
+        screams.push({
+          screamId: doc.id,
+          body: doc.data().body,
+          userHandle: doc.data().userHandle,
+          createdAt: doc.data().createdAt,
         })
-        .catch((err) => console.error(err))
+      })
+      return res.json(screams)
     })
+    .catch((err) => console.error(err))
 })
 
 app.post('/scream', (req, res) => {
