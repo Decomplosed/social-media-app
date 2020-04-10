@@ -67,6 +67,8 @@ app.post('/signup', (req, res) => {
 
   // TODO Validate Data
 
+  let token
+
   db.doc(`/users/${newUser.handle}`)
     .get()
     .then((doc) => {
