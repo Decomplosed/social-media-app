@@ -86,12 +86,17 @@ app.post('/signup', (req, res) => {
     })
     .then((token) => {
       token = token
-      const newUserCredentials = {
+      const userCredentials = {
         handle: newUser.handle,
         email: newUser.email,
         createdAt: new Date().toISOString(),
         userId,
       }
+
+      db.doc(`/users/${newUser.handle}`).set(userCredentials)
+    })
+    .then(() => {
+      return res.status(201).json({ token })
     })
     .catch((err) => {
       console.error(err)
