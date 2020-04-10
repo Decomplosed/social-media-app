@@ -84,8 +84,8 @@ app.post('/signup', (req, res) => {
       userId = data.user.uid
       return data.user.getIdToken()
     })
-    .then((token) => {
-      token = token
+    .then((idToken) => {
+      token = idToken
       const userCredentials = {
         handle: newUser.handle,
         email: newUser.email,
