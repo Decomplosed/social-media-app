@@ -75,7 +75,7 @@ app.post('/signup', (req, res) => {
     .then((data) => {
       return res
         .status(201)
-        .json({ message: `user ${data.user.uid} sidneg up successfully` })
+        .json({ message: `user ${data.user.uid} signed up successfully` })
     })
     .catch((err) => {
       console.error(err)
