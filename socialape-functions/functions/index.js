@@ -67,6 +67,14 @@ app.post('/signup', (req, res) => {
 
   // TODO Validate Data
 
+  db.doc(`/users/${newUser.handle}`)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        return res.status(400).json({ handle: 'This handle is already taken' })
+      }
+    })
+
   firebase
     .auth()
     .createUserWithEmailAndPassword(newUser.email, newUser.password)
