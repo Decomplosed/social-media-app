@@ -4,10 +4,7 @@ const admin = require('firebase-admin')
 admin.initializeApp()
 
 const express = require('express')
-
-exports.helloWorld = functions.https.onRequest((request, response) => {
-  response.send('Hello world!')
-})
+const app = express()
 
 exports.getScreams = functions.https.onRequest((req, res) => {
   admin
