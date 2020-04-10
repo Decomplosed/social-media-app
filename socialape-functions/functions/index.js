@@ -59,4 +59,28 @@ app.post('/scream', (req, res) => {
     })
 })
 
+app.post('/signup', (req, res) => {
+  const newUser = {
+    email: req.body.email,
+    password: req.body.password,
+    confirmPassword: req.body.confirmPassword,
+    handle: req.body.handle,
+  }
+
+  // TODO Validate Data
+
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(newUser.email, newUser.password)
+    .then((data) => {
+      return res
+        .status(201)
+        .json({ message: `user ${data.user.uid} sidneg up successfully` })
+    })
+    .catch((err) => {
+      console.error(err)
+      return res.status(500).json({ error: err.code })
+    })
+})
+
 exports.api = functions.https.onRequest(app)
