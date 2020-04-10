@@ -57,6 +57,11 @@ app.post('/scream', (req, res) => {
     })
 })
 
+const isEmpty = (string) => {
+  if (string.trim() === '') return true
+  else return false
+}
+
 app.post('/signup', (req, res) => {
   const newUser = {
     email: req.body.email,
