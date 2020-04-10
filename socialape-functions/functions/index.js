@@ -3,6 +3,8 @@ const admin = require('firebase-admin')
 
 admin.initializeApp()
 
+const express = require('express')
+
 exports.helloWorld = functions.https.onRequest((request, response) => {
   response.send('Hello world!')
 })
