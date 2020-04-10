@@ -81,11 +81,17 @@ app.post('/signup', (req, res) => {
       }
     })
     .then((data) => {
+      userId = data.user.uid
       return data.user.getIdToken()
     })
     .then((token) => {
       token = token
-      const newUserCredentials = {}
+      const newUserCredentials = {
+        handle: newUser.handle,
+        email: newUser.email,
+        createdAt: new Date().toISOString(),
+        userId,
+      }
     })
     .catch((err) => {
       console.error(err)
