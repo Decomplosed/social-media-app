@@ -85,6 +85,7 @@ app.post('/signup', (req, res) => {
     })
     .then((token) => {
       token = token
+      const newUserCredentials = {}
     })
     .catch((err) => {
       console.error(err)
