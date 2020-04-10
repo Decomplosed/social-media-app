@@ -70,6 +70,11 @@ app.post('/signup', (req, res) => {
     handle: req.body.handle,
   }
 
+  let errors = {}
+
+  if (isEmpty(newUser.email)) {
+  }
+
   // TODO Validate Data
 
   let token, userId
