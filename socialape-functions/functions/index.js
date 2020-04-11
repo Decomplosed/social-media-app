@@ -70,6 +70,10 @@ const FBAuth = (req, res, next) => {
       req.user.handle = data.docs[0].data().handle
       return next()
     })
+    .catch((err) => {
+      console.error('Error while verifying token ', err)
+      return res.status(403).json(err)
+    })
 }
 
 app.post('/scream', FBAuth, (req, res) => {
