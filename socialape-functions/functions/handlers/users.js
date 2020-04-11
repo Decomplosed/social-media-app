@@ -4,6 +4,8 @@ const config = require('../utils/config')
 
 firebase.initializeApp(config)
 
+const { validateSignupData } = require('../utils/validators')
+
 exports.signup = (req, res) => {
   const newUser = {
     email: req.body.email,
@@ -11,21 +13,6 @@ exports.signup = (req, res) => {
     confirmPassword: req.body.confirmPassword,
     handle: req.body.handle,
   }
-
-  let errors = {}
-
-  if (isEmpty(newUser.email)) {
-    errors.email = 'Must not be empty'
-  } else if (!isEmail(newUser.email)) {
-    errors.email = 'Must be a valid email address'
-  }
-
-  if (isEmpty(newUser.password)) errors.password = 'Must not be empty'
-  if (newUser.password !== newUser.confirmPassword)
-    errors.confirmPassword = 'Passwords must be the same'
-  if (isEmpty(newUser.handle)) errors.handle = 'Must not be empty'
-
-  if (Object.keys(errors).length > 0) return res.status(400).json(errors)
 
   let token, userId
 
