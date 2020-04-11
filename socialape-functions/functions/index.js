@@ -85,6 +85,7 @@ app.post('/signup', (req, res) => {
   }
 
   if (isEmpty(newUser.password)) errors.password = 'Must not be empty'
+  if (newUser.password !== newUser.confirmPassword) errors.confirmPassword = 'Passwords must be the same'
 
   // TODO Validate Data
 
