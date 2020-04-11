@@ -144,6 +144,8 @@ app.post('/login', (res, res) => {
 
   if (isEmpty(user.email)) errors.email = 'Must not be empty'
   if (isEmpty(user.password)) errors.password = 'Must not be empty'
+
+  if (Object.keys(errors).length > 0) return res.status(400).json(errors)
 })
 
 exports.api = functions.https.onRequest(app)
