@@ -79,10 +79,12 @@ app.post('/signup', (req, res) => {
   let errors = {}
 
   if (isEmpty(newUser.email)) {
-    errors.email = 'Email must not be empty'
+    errors.email = 'Must not be empty'
   } else if (!isEmail(newUser.email)) {
     errors.email = 'Must be a valid email address'
   }
+
+  if (isEmpty(newUser.password)) errors.password = 'Must not be empty'
 
   // TODO Validate Data
 
