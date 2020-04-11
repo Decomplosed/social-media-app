@@ -1,7 +1,6 @@
 const functions = require('firebase-functions')
-const admin = require('firebase-admin')
+
 const app = require('express')()
-admin.initializeApp()
 
 const config = {
   apiKey: 'AIzaSyBTdQUqGlP-dk4vmxuiSBMYNPXgnUt05UQ',
@@ -16,8 +15,6 @@ const config = {
 const firebase = require('firebase')
 
 firebase.initializeApp(config)
-
-const db = admin.firestore()
 
 app.get('/screams', (req, res) => {
   db.collection('screams')
