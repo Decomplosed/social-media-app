@@ -36,10 +36,17 @@ app.get('/screams', (req, res) => {
       })
       return res.json(screams)
     })
-    .catch((err) => console.error(err))
+    .catch((err) => {
+      console.error(err)
+      return res.status(400).json({ error: err.code })
+    })
 })
 
-app.post('/scream', (req, res) => {
+app.post('/scream', FBAuth, (req, res) => {
+  if (req.body.body.trim() === '') {
+    return res.status(400).json({ body: 'Body must not be empty' })
+  }
+
   const newScream = {
     body: req.body.body,
     userHandle: req.body.userHandle,
