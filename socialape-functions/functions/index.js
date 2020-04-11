@@ -18,5 +18,4 @@ app.post('/scream', FBAuth, postOneScream)
 app.post('/signup', signup)
 app.post('/login', login)
 
-
 exports.api = functions.https.onRequest(app)

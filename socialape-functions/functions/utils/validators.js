@@ -22,6 +22,13 @@ exports.validateSignupData = (data) => {
   if (data.password !== data.confirmPassword)
     errors.confirmPassword = 'Passwords must be the same'
   if (isEmpty(data.handle)) errors.handle = 'Must not be empty'
+}
+
+exports.validateLoginData = (data) => {
+  let errors = {}
+
+  if (isEmpty(user.email)) errors.email = 'Must not be empty'
+  if (isEmpty(user.password)) errors.password = 'Must not be empty'
 
   return {
     errors,
