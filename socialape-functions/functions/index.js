@@ -1,6 +1,7 @@
 const functions = require('firebase-functions')
-
 const app = require('express')()
+
+const { getAllScreams, postOneScream } = require('./handlers/screams')
 
 const config = {
   apiKey: 'AIzaSyBTdQUqGlP-dk4vmxuiSBMYNPXgnUt05UQ',
@@ -16,28 +17,8 @@ const firebase = require('firebase')
 
 firebase.initializeApp(config)
 
-app.get('/screams', (req, res) => {
-  db.collection('screams')
-    .orderBy('createdAt', 'desc')
-    .get()
-    .then((data) => {
-      let screams = []
-
-      data.forEach((doc) => {
-        screams.push({
-          screamId: doc.id,
-          body: doc.data().body,
-          userHandle: doc.data().userHandle,
-          createdAt: doc.data().createdAt,
-        })
-      })
-      return res.json(screams)
-    })
-    .catch((err) => {
-      console.error(err)
-      return res.status(400).json({ error: err.code })
-    })
-})
+//Scream Routes
+app.get('/screams', getAllScreams)
 
 const FBAuth = (req, res, next) => {
   let idToken
@@ -73,27 +54,7 @@ const FBAuth = (req, res, next) => {
     })
 }
 
-app.post('/scream', FBAuth, (req, res) => {
-  if (req.body.body.trim() === '') {
-    return res.status(400).json({ body: 'Body must not be empty' })
-  }
-
-  const newScream = {
-    body: req.body.body,
-    userHandle: req.user.handle,
-    createdAt: new Date().toISOString(),
-  }
-
-  db.collection('screams')
-    .add(newScream)
-    .then((doc) => {
-      res.json({ message: `Document ${doc.id} created successfully!` })
-    })
-    .catch((err) => {
-      res.status(500).json({ error: 'Something went wrong' })
-      console.error(err)
-    })
-})
+app.post('/scream', FBAuth, postOneScream)
 
 const isEmail = (email) => {
   const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
