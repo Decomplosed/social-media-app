@@ -156,7 +156,11 @@ app.post('/login', (req, res) => {
     .then((token) => res.json({ token }))
     .catch((err) => {
       console.error(err)
-      return res.status(500).json({ error: error.code })
+      if (err.code === 'auth/wrong-password') {
+        return res
+          .status(403)
+          .json({ general: 'Wrong credentials, please try again' })
+      } else return res.status(500).json({ error: error.code })
     })
 })
 
