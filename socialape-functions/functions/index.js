@@ -134,4 +134,16 @@ app.post('/signup', (req, res) => {
     })
 })
 
+app.post('/login', (res, res) => {
+  const user = {
+    email: req.body.email,
+    password: req.body.password,
+  }
+
+  let errors = {}
+
+  if (isEmpty(user.email)) errors.email = 'Must not be empty'
+  if (isEmpty(user.password)) errors.password = 'Must not be empty'
+})
+
 exports.api = functions.https.onRequest(app)
