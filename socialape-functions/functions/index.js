@@ -19,6 +19,7 @@ firebase.initializeApp(config)
 
 //Scream Routes
 app.get('/screams', getAllScreams)
+app.post('/scream', FBAuth, postOneScream)
 
 const FBAuth = (req, res, next) => {
   let idToken
@@ -53,8 +54,6 @@ const FBAuth = (req, res, next) => {
       return res.status(403).json(err)
     })
 }
-
-app.post('/scream', FBAuth, postOneScream)
 
 const isEmail = (email) => {
   const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
