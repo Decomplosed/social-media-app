@@ -4,7 +4,11 @@ const config = require('../utils/config')
 
 firebase.initializeApp(config)
 
-const { validateSignupData, validateLoginData } = require('../utils/validators')
+const {
+  validateSignupData,
+  validateLoginData,
+  reduceUserDetails,
+} = require('../utils/validators')
 
 exports.signup = (req, res) => {
   const newUser = {
