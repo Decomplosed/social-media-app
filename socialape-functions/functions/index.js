@@ -21,7 +21,7 @@ const {
 app.get('/screams', getAllScreams)
 app.post('/scream', FBAuth, postOneScream)
 app.get('/scream/:screamId', getScream)
-app.post('/scream/:screamId/comment', commentOnScream)
+app.post('/scream/:screamId/comment', FBAuth, commentOnScream)
 
 // TODO: delete scream
 // TODO: like a scream

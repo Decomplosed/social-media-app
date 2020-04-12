@@ -87,8 +87,6 @@ exports.commentOnScream = (req, res) => {
     userImage: req.user.imageUrl,
   }
 
-  console.log(newComment)
-
   db.doc(`/screams/${req.params.screamId}`)
     .get()
     .then((doc) => {
