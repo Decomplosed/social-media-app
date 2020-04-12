@@ -127,7 +127,7 @@ exports.uploadImage = (req, res) => {
       })
       .then(() => {
         const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${imageFileName}?alt=media`
-        return db.doc(`/users/${req.user.handle}}`).update({ imageUrl })
+        return db.doc(`/users/${req.user.handle}`).update({ imageUrl })
       })
       .then(() => {
         return res.json({ message: 'Image uploaded successfully' })
@@ -137,4 +137,5 @@ exports.uploadImage = (req, res) => {
         return res.status(500).json({ error: err.code })
       })
   })
+  busboy.end(req.rawBody)
 }
