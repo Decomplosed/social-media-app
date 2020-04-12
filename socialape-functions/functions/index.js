@@ -15,6 +15,7 @@ const {
 //Scream Routes
 app.get('/screams', getAllScreams)
 app.post('/scream', FBAuth, postOneScream)
+app.get('/scream/:screamId', getScream)
 
 // Users routes
 app.post('/signup', signup)
