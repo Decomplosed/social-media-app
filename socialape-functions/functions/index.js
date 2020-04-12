@@ -3,7 +3,11 @@ const app = require('express')()
 
 const FBAuth = require('./utils/fbAuth')
 
-const { getAllScreams, postOneScream, getAuthenticatedUser } = require('./handlers/screams')
+const {
+  getAllScreams,
+  postOneScream,
+  getAuthenticatedUser,
+} = require('./handlers/screams')
 const {
   signup,
   login,
