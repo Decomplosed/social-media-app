@@ -89,6 +89,10 @@ exports.login = (req, res) => {
     })
 }
 
+exports.addUserDetails = (req, res) => {
+  
+}
+
 exports.uploadImage = (req, res) => {
   const BusBoy = require('busboy')
   const path = require('path')
