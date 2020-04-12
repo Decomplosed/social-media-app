@@ -3,16 +3,13 @@ const app = require('express')()
 
 const FBAuth = require('./utils/fbAuth')
 
-const {
-  getAllScreams,
-  postOneScream,
-  getAuthenticatedUser,
-} = require('./handlers/screams')
+const { getAllScreams, postOneScream } = require('./handlers/screams')
 const {
   signup,
   login,
   uploadImage,
   addUserDetails,
+  getAuthenticatedUser,
 } = require('./handlers/users')
 
 //Scream Routes
