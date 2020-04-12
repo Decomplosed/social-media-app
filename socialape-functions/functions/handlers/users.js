@@ -90,12 +90,12 @@ exports.login = (req, res) => {
 }
 
 exports.uploadImage = (req, res) => {
-  const busboy = require('busboy')
+  const BusBoy = require('busboy')
   const path = require('path')
   const os = require('os')
   const fs = require('fs')
 
-  const busboy = new busboy({ headers: req.headers })
+  const busboy = new BusBoy({ headers: req.headers })
 
   let imageFileName
   let imageToBeUploaded = {}
