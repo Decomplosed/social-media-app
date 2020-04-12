@@ -7,6 +7,7 @@ const {
   getAllScreams,
   postOneScream,
   getScream,
+  commentOnScream,
 } = require('./handlers/screams')
 const {
   signup,
