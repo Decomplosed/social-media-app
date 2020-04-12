@@ -17,6 +17,12 @@ app.get('/screams', getAllScreams)
 app.post('/scream', FBAuth, postOneScream)
 app.get('/scream/:screamId', getScream)
 
+// TODO: delete scream
+// TODO: like a scream
+// TODO: unlike a scream
+// TODO: comment on scream
+
+
 // Users routes
 app.post('/signup', signup)
 app.post('/login', login)
