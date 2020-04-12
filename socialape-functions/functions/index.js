@@ -13,6 +13,6 @@ app.post('/scream', FBAuth, postOneScream)
 // Users routes
 app.post('/signup', signup)
 app.post('/login', login)
-app.post('/user/image', uploadImage)
+app.post('/user/image', FBAtuh, uploadImage)
 
 exports.api = functions.https.onRequest(app)
