@@ -106,7 +106,9 @@ exports.uploadImage = (req, res) => {
     console.log(mimetype)
 
     const imageExtension = filename.split('.')[filename.split('.').length - 1]
-    const imageFileName = `Math.round(Math.random() * 1000000).${imageExtension}`
+    imageFileName = `${Math.round(
+      Math.random() * 100000000
+    ).toString()}.${imageExtension}`
     const filePath = path.join(os.tmpdir(), imageFileName)
     imageToBeUploaded = { filePath, mimetype }
 
