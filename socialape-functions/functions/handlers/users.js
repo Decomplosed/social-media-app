@@ -94,6 +94,8 @@ exports.login = (req, res) => {
 }
 
 exports.addUserDetails = (req, res) => {
+  let userDetails = reduceUserDetails(req.body)
+
   
 }
 
