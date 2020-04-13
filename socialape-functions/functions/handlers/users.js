@@ -119,6 +119,8 @@ exports.getUserDetails = (req, res) => {
           .collection('screams')
           .where('userHandle', '==', req.params.handle)
           .orderBy('createdAt', 'desc')
+      } else {
+        return res.status(404).json({ error: 'User not found' })
       }
     })
     .then((data) => {
