@@ -1,6 +1,8 @@
 const functions = require('firebase-functions')
 const app = require('express')()
 
+const { db } = require('./utils/admin')
+
 const FBAuth = require('./utils/fbAuth')
 
 const {
@@ -10,7 +12,7 @@ const {
   commentOnScream,
   likeScream,
   unlikeScream,
-  deleteScream
+  deleteScream,
 } = require('./handlers/screams')
 const {
   signup,
