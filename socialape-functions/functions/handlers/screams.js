@@ -119,9 +119,9 @@ exports.likeScream = (req, res) => {
     .where('screamId', '==', req.params.screamId)
     .limit(1)
 
-  const screamDocument = db.doc(`/scream/${req.params.screamId}`)
+  const screamDocument = db.doc(`/screams/${req.params.screamId}`)
 
-  let screamData = {}
+  let screamData
 
   screamDocument
     .get()
@@ -166,7 +166,7 @@ exports.unlikeScream = (req, res) => {
     .where('screamId', '==', req.params.screamId)
     .limit(1)
 
-  const screamDocument = db.doc(`/scream/${req.params.screamId}`)
+  const screamDocument = db.doc(`/screams/${req.params.screamId}`)
 
   let screamData = {}
 
