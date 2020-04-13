@@ -20,6 +20,8 @@ const {
   uploadImage,
   addUserDetails,
   getAuthenticatedUser,
+  getUserDetails,
+  markNotificationsRead,
 } = require('./handlers/users')
 
 //Scream Routes
