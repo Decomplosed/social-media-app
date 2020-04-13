@@ -8,6 +8,8 @@ const {
   postOneScream,
   getScream,
   commentOnScream,
+  likeScream,
+  unlikeScream,
 } = require('./handlers/screams')
 const {
   signup,
