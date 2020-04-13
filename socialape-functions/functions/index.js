@@ -95,7 +95,7 @@ exports.createNotificationOnComment = functions
         if (doc.exists) {
           return db.doc(`/notifications/${snapshot.id}`).set({
             createdAt: new Date().toISOString(),
-            recipent: doc.data().userHandle,
+            recipient: doc.data().userHandle,
             sender: snapshot.data().userHandle,
             type: 'comment',
             read: false,
