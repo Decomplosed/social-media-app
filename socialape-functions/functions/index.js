@@ -48,7 +48,8 @@ exports.createNotificationOnLike = functions
   .region('europe-west1')
   .firestore.document('likes/{id}')
   .onCreate((snapshot) => {
-    db.doc(`/screams/${snapshot.data().screamId}`)
+    return db
+      .doc(`/screams/${snapshot.data().screamId}`)
       .get()
       .then((doc) => {
         if (doc.exists) {
@@ -62,13 +63,7 @@ exports.createNotificationOnLike = functions
           })
         }
       })
-      .then(() => {
-        return
-      })
-      .catch((err) => {
-        console.error(err)
-        return
-      })
+      .catch((err) => console.error(err))
   })
 
 exports.deleteNotificationOnUnLike = functions
