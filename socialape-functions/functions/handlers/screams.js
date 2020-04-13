@@ -204,7 +204,7 @@ exports.unlikeScream = (req, res) => {
 }
 
 exports.deleteScream = (req, res) => {
-  const document = db.doc(`/scream/${req.params.screamId}`)
+  const document = db.doc(`/screams/${req.params.screamId}`)
 
   document
     .get()
