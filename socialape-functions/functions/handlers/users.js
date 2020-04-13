@@ -143,8 +143,10 @@ exports.getAuthenticatedUser = (req, res) => {
           screamId: doc.data().screamId,
           type: doc.data().type,
           read: doc.data().read,
+          notificationId: doc.id,
         })
       })
+      return res.json(userData)
     })
     .catch((err) => {
       console.error(err)
