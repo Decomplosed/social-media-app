@@ -110,7 +110,7 @@ exports.addUserDetails = (req, res) => {
 exports.getUserDetails = (req, res) => {
   let userData = {}
 
-  db.doc(`users/${req.params.handle}`)
+  db.doc(`/users/${req.params.handle}`)
     .get()
     .then((doc) => {
       if (doc.exists) {
@@ -119,6 +119,7 @@ exports.getUserDetails = (req, res) => {
           .collection('screams')
           .where('userHandle', '==', req.params.handle)
           .orderBy('createdAt', 'desc')
+          .get()
       } else {
         return res.status(404).json({ error: 'User not found' })
       }
