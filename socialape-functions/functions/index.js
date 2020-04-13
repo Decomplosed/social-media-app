@@ -72,6 +72,21 @@ exports.createNotificationOnLike = functions
       })
   })
 
+  exports.deleteNotificationOnUnlike = functions
+  .region('europe-west1')
+  .firestore.document('likes/{id}')
+  .onDelete((snapshot) => {
+    db.doc(`/nofifications/${snapshot.id}`)
+    .delete()
+    .then(() => {
+      return
+    })
+    .catch(err => {
+      console.error(err)
+      return
+    })
+  })
+
 exports.createNotificationOnComment = functions
   .region('europe-west1')
   .firestore.document('comments/{id}')
