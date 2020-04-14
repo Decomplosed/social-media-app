@@ -7,7 +7,11 @@ export class Navbar extends Component {
   render() {
     return (
       <AppBar position='fixed'>
-        <Toolbar></Toolbar>
+        <Toolbar>
+          <Button color='inherit'>Login</Button>
+          <Button color='inherit'>Home</Button>
+          <Button color='inherit'>Signup</Button>
+        </Toolbar>
       </AppBar>
     )
   }
