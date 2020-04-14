@@ -7,6 +7,7 @@ import Signup from './pages/Signup'
 
 import Navbar from './components/Navbar'
 
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider'
 import './App.css'
 
 function App() {
