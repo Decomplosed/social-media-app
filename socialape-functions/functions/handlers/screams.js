@@ -34,7 +34,7 @@ exports.postOneScream = (req, res) => {
   const newScream = {
     body: req.body.body,
     userHandle: req.user.handle,
-    uderImage: req.user.imageUrl,
+    userImage: req.user.imageUrl,
     createdAt: new Date().toISOString(),
     likeCount: 0,
     commentCount: 0,
