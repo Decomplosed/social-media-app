@@ -112,11 +112,10 @@ exports.createNotificationOnComment = functions
 
 exports.onUserImageChange = functions
   .region('europe-west1')
-  .firestore.document('/users/${userId}')
+  .firestore.document('/users/{userId}')
   .onUpdate((change) => {
     if (change.before.data().imageUrl !== change.after.data().imageUrl) {
       const batch = db.batch()
-
       return db
         .collection('screams')
         .where('userHandle', '==', change.before.data().handle)
