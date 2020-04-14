@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
 
-export class Home extends Component {
+export class Home extends React.Component {
   render() {
     return (
-      <div>
-        <h1>Homepage</h1>
-      </div>
     )
   }
 }
