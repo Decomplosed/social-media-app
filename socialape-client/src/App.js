@@ -31,18 +31,20 @@ const theme = createMuiTheme({
 class App extends React.Component {
   render() {
     return (
-      <div className='App'>
-        <Router>
-          <Navbar />
-          <div className='container'>
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/login' component={Login} />
-              <Route exact path='/signup' component={Signup} />
-            </Switch>
-          </div>
-        </Router>
-      </div>
+      <MuiThemeProvider theme={theme}>
+        <div className='App'>
+          <Router>
+            <Navbar />
+            <div className='container'>
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/login' component={Login} />
+                <Route exact path='/signup' component={Signup} />
+              </Switch>
+            </div>
+          </Router>
+        </div>
+      </MuiThemeProvider>
     )
   }
 }
