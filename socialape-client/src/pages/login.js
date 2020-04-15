@@ -70,6 +70,14 @@ class Login extends Component {
               onChange={this.handleChange}
               fullWidth
             />
+            <Button
+              type='submit'
+              variant='contained'
+              color='primary'
+              className={classes.button}
+            >
+              Login
+            </Button>
           </form>
         </Grid>
         <Grid item sm />
