@@ -58,7 +58,7 @@ export class Scream extends React.Component {
             {userHandle}
           </Typography>
           <Typography variant='body2' color='textSecondary'>
-            {createdAt}
+            {dayjs(createdAt).fromNow()}
           </Typography>
           <Typography variant='body1'>{body}</Typography>
         </CardContent>
