@@ -59,6 +59,16 @@ class Login extends Component {
               onChange={this.handleChange}
               fullWidth
             />
+            <TextField
+              id='password'
+              name='password'
+              type='password'
+              label='Password'
+              className={classes.textField}
+              value={this.state.password}
+              onChange={this.handleChange}
+              fullWidth
+            />
           </form>
         </Grid>
         <Grid item sm />
