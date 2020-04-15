@@ -16,7 +16,20 @@ const styles = {
   },
 }
 
-export class Login extends Component {
+const handleSubmit = (event) => {
+  console.log('hi')
+}
+
+class Login extends Component {
+  constructor() {
+    super()
+    this.state = {
+      email: '',
+      password: '',
+      laoding: false,
+      errors: {}
+    }
+  }
   render() {
     const { classes } = this.props
 
