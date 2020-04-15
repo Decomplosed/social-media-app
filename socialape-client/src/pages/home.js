@@ -13,7 +13,6 @@ export class Home extends React.Component {
     axios
       .get('/screams')
       .then((res) => {
-        console.log(res.data)
         this.setState({
           screams: res.data,
         })
