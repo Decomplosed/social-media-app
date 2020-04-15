@@ -1,5 +1,6 @@
 import React from 'react'
 import withStyles from '@material-ui/core/styles/withStyles'
+import { CardMedia } from '@material-ui/core'
 
 const styles = {
   card: {
@@ -9,9 +10,24 @@ const styles = {
 
 export class Scream extends React.Component {
   render() {
-    const { classes } = this.props
+    const {
+      classes,
+      scream: {
+        body,
+        createdAt,
+        userImage,
+        userHandle,
+        screamId,
+        likeCount,
+        commentCount,
+      },
+    } = this.props
 
-    return <div></div>
+    return (
+      <Card>
+        <CardMedia image={userImage} title='Profile image' />
+      </Card>
+    )
   }
 }
 
