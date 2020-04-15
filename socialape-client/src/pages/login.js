@@ -23,13 +23,13 @@ class Login extends Component {
       email: '',
       password: '',
       laoding: false,
-      errors: {}
+      errors: {},
     }
   }
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     })
   }
 
@@ -48,6 +48,18 @@ class Login extends Component {
           <Typography variant='h2' className={classes.pageTitle}>
             Login
           </Typography>
+          <form noValidate onSubmit={this.handleSubmit}>
+            <TextField
+              id='email'
+              name='email'
+              type='email'
+              label='Email'
+              className={classes.textField}
+              value={this.state.email}
+              onChange={this.handleChange}
+              fullWidth
+            />
+          </form>
         </Grid>
         <Grid item sm />
       </Grid>
