@@ -15,4 +15,4 @@ export class Login extends Component {
   }
 }
 
-export default Login
+export default withStyles(styles)(Login)
