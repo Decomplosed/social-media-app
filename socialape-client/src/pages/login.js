@@ -4,10 +4,14 @@ import PropTypes from 'prop-types'
 import AppIcon from '../images/icon.png'
 
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 const styles = {
   form: {
     textAlign: 'center',
+  },
+  image: {
+    margin: '20px auto',
   },
 }
 
