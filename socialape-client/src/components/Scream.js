@@ -25,6 +25,8 @@ const styles = {
 
 export class Scream extends React.Component {
   render() {
+    dayjs.extend(relativeTime)
+
     const {
       classes,
       scream: {
