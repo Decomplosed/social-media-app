@@ -42,6 +42,7 @@ export class Scream extends React.Component {
           image={userImage}
           title='Profile image'
           className={classes.image}
+          src='picture'
         />
         <CardContent className={classes.content}>
           <Typography
