@@ -29,6 +29,13 @@ export class Scream extends React.Component {
     return (
       <Card>
         <CardMedia image={userImage} title='Profile image' />
+        <CardContent>
+          <Typography variant='h5'>{userHandle}</Typography>
+          <Typography variant='body2' color='textSecondary'>
+            {createdAt}
+          </Typography>
+          <Typography variant='body1'></Typography>
+        </CardContent>
       </Card>
     )
   }
