@@ -38,7 +38,7 @@ export class Scream extends React.Component {
           <Typography variant='body2' color='textSecondary'>
             {createdAt}
           </Typography>
-          <Typography variant='body1'></Typography>
+          <Typography variant='body1'>{body}</Typography>
         </CardContent>
       </Card>
     )
