@@ -16,10 +16,6 @@ const styles = {
   },
 }
 
-const handleSubmit = (event) => {
-  console.log('hi')
-}
-
 class Login extends Component {
   constructor() {
     super()
@@ -30,6 +26,17 @@ class Login extends Component {
       errors: {}
     }
   }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  handleSubmit = (event) => {
+    console.log('hi')
+  }
+
   render() {
     const { classes } = this.props
 
