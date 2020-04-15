@@ -19,7 +19,7 @@ export class Login extends Component {
       <Grid container className={classes.form}>
         <Grid item sm />
         <Grid item sm>
-          <p>Yoooo</p>
+          <img src={AppIcon} alt='SocialApe Icon' />
         </Grid>
         <Grid item sm />
       </Grid>
