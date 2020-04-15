@@ -15,6 +15,15 @@ const styles = {
   image: {
     margin: '20px auto',
   },
+  pageTitle: {
+    margin: '5px auto',
+  },
+  textField: {
+    margin: '5px auto',
+  },
+  button: {
+    marginTop: 20,
+  },
 }
 
 class Login extends Component {
