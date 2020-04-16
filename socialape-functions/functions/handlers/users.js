@@ -83,11 +83,9 @@ exports.login = (req, res) => {
     .then((token) => res.json({ token }))
     .catch((err) => {
       console.error(err)
-      if (err.code === 'auth/wrong-password') {
-        return res
-          .status(403)
-          .json({ general: 'Wrong credentials, please try again' })
-      } else return res.status(500).json({ error: error.code })
+      return res
+        .status(403)
+        .json({ general: 'Wrong credentials, please try again' })
     })
 }
 
