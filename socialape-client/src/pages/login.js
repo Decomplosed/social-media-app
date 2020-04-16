@@ -69,7 +69,6 @@ class Login extends Component {
     axios
       .post('/login', userData)
       .then((res) => {
-        console.log(res.data)
         this.setState({ loading: false })
         this.props.history.push('/')
       })
