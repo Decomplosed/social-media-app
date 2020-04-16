@@ -126,6 +126,9 @@ class Login extends Component {
               className={classes.button}
             >
               Login
+              {loading && (
+                <CircularProgress size={20} className={classes.progress} />
+              )}
             </Button>
             <br />
             <small>
