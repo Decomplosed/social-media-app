@@ -122,6 +122,30 @@ class Signup extends Component {
               onChange={this.handleChange}
               fullWidth
             />
+            <TextField
+              id='confirmPassword'
+              name='confirmPassword'
+              type='password'
+              label='Confirm Password'
+              className={classes.textField}
+              helperText={errors.confirmPassword}
+              error={errors.password ? true : false}
+              value={this.state.confirmPassword}
+              onChange={this.handleChange}
+              fullWidth
+            />
+            <TextField
+              id='handle'
+              name='handle'
+              type='text'
+              label='Handle'
+              className={classes.textField}
+              helperText={errors.handle}
+              error={errors.handle ? true : false}
+              value={this.state.handle}
+              onChange={this.handleChange}
+              fullWidth
+            />
             {errors.general && (
               <Typography variant='body2' className={classes.customError}>
                 {errors.general}
@@ -141,7 +165,7 @@ class Signup extends Component {
             </Button>
             <br />
             <small>
-              Don't have an account? Sign up <Link to='/signup'>here</Link>
+              Already have an account? Login <Link to='/login'>here</Link>
             </small>
           </form>
         </Grid>
