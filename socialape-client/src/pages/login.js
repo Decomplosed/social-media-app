@@ -49,6 +49,20 @@ class Login extends Component {
     this.setState({
       loading: true,
     })
+
+    const userData = {
+      email: this.state.email,
+      password: this.state.password,
+    }
+
+    axios
+      .post('/login', userData)
+      .then((res) => {
+        console.log(res.data)
+        this.setState({ loading: false })
+        this.props.history.push('/')
+      })
+      .catch((err) => {})
   }
 
   render() {
