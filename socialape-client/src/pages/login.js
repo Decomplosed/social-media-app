@@ -45,7 +45,10 @@ class Login extends Component {
   }
 
   handleSubmit = (event) => {
-    console.log('hi')
+    event.preventDefault()
+    this.setState({
+      loading: true,
+    })
   }
 
   render() {
