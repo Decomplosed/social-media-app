@@ -62,7 +62,12 @@ class Login extends Component {
         this.setState({ loading: false })
         this.props.history.push('/')
       })
-      .catch((err) => {})
+      .catch((err) => {
+        this.setState({
+          errors: err.response.data,
+          loading: false,
+        })
+      })
   }
 
   render() {
