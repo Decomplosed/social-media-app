@@ -25,6 +25,10 @@ const styles = {
   button: {
     marginTop: 20,
   },
+  customError: {
+    color: 'red',
+    fontSize: '0.8rem',
+  },
 }
 
 class Login extends Component {
