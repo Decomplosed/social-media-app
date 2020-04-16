@@ -26,11 +26,15 @@ const styles = {
   },
   button: {
     margin: '20px auto 10px',
+    position: 'relative',
   },
   customError: {
     color: 'red',
     fontSize: '0.8rem',
     marginTop: 10,
+  },
+  progress: {
+    position: 'absolute',
   },
 }
 
