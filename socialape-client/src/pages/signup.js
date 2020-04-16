@@ -71,7 +71,7 @@ class Signup extends Component {
     }
 
     axios
-      .post('/login', newUserData)
+      .post('/signup', newUserData)
       .then((res) => {
         console.log(res.data)
         this.setState({ loading: false })
