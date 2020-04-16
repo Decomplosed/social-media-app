@@ -107,6 +107,11 @@ class Login extends Component {
               onChange={this.handleChange}
               fullWidth
             />
+            {errors.general && (
+              <Typography variant='body2' className={classes.customError}>
+                {errors.general}
+              </Typography>
+            )}
             <Button
               type='submit'
               variant='contained'
