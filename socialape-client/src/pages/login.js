@@ -24,7 +24,7 @@ const styles = {
     margin: '5px auto',
   },
   button: {
-    marginTop: 20,
+    margin: '20px auto 10px',
   },
   customError: {
     color: 'red',
