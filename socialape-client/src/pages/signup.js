@@ -63,13 +63,15 @@ class Signup extends Component {
       loading: true,
     })
 
-    const userData = {
+    const newUserData = {
       email: this.state.email,
       password: this.state.password,
+      confirmPassword: this.state.confirmPassword,
+      handle: this.state.handle,
     }
 
     axios
-      .post('/login', userData)
+      .post('/login', newUserData)
       .then((res) => {
         console.log(res.data)
         this.setState({ loading: false })
