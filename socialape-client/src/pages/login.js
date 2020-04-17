@@ -44,7 +44,6 @@ class Login extends Component {
     this.state = {
       email: '',
       password: '',
-      laoding: false,
       errors: {},
     }
   }
@@ -57,28 +56,11 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.setState({
-      loading: true,
-    })
 
     const userData = {
       email: this.state.email,
       password: this.state.password,
     }
-
-    axios
-      .post('/login', userData)
-      .then((res) => {
-        localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`)
-        this.setState({ loading: false })
-        this.props.history.push('/')
-      })
-      .catch((err) => {
-        this.setState({
-          errors: err.response.data,
-          loading: false,
-        })
-      })
   }
 
   render() {
