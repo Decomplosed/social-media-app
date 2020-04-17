@@ -5,6 +5,7 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import jwtDecode from 'jwt-decode'
 
 import { Provider } from 'react-redux'
+import store from './redux/store'
 
 import Home from './pages/Home'
 import Login from './pages/Login'
