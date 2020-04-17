@@ -4,6 +4,8 @@ import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles'
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 import jwtDecode from 'jwt-decode'
 
+import { Provider } from 'react-redux'
+
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
