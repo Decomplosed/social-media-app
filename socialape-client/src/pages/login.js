@@ -138,4 +138,7 @@ Login.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(Login)
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(withStyles(styles)(Login))
