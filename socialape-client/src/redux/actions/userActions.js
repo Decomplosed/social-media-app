@@ -12,12 +12,13 @@ export const loginUser = (userData, history) => (dispatch) => {
       this.setState({ loading: false })
       axios.defaults.header.common['Authorization'] = FBIdToken
       dispatch(getUserData())
+      dispatch({ type: CLEAR_ERRORS })
       history.push('/')
     })
     .catch((err) => {
-      this.setState({
-        errors: err.response.data,
-        loading: false,
+      dispatch({
+        type: SET_ERRORS,
+        payload: err.response.data,
       })
     })
 }
