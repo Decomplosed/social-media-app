@@ -11,7 +11,8 @@ export const loginUser = (userData, history) => (dispatch) => {
       localStorage.setItem('FBIdToken', FBIdToken)
       this.setState({ loading: false })
       axios.defaults.header.common['Authorization'] = FBIdToken
-      this.props.history.push('/')
+      dispatch(getUserData())
+      history.push('/')
     })
     .catch((err) => {
       this.setState({
