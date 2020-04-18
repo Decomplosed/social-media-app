@@ -16,7 +16,10 @@ const initialState = {
 export default function (state = initialState, action) {
   switch (action.type) {
     case SET_AUTHENTICATED:
-      return {}
+      return {
+        ...state,
+        authenticated: true,
+      }
     default:
       return {
         ...state,
