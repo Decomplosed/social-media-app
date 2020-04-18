@@ -1,1 +1,6 @@
 import { SET_ERRORS, CLEAR_ERRORS, LOADING_UI } from '../types'
+
+const initialState = {
+  loading: false,
+  errors: null,
+}
