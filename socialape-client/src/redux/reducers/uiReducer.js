@@ -19,6 +19,11 @@ export default function (state = initialState, action) {
         loading: false,
         errors: null,
       }
+    case LOADING_UI:
+      return {
+        ...state,
+        loading: true,
+      }
     default:
       return state
   }
