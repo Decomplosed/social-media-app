@@ -21,4 +21,14 @@ export const loginUser = (userData) => (dispatch) => {
     })
 }
 
-export const getUserData = () => (dispatch) => {}
+export const getUserData = () => (dispatch) => {
+  axios
+    .get('/user')
+    .then((res) => {
+      dispatch({
+        type: SET_USER,
+        payload: res.data,
+      })
+    })
+    .catch((err) => console.log(err))
+}
