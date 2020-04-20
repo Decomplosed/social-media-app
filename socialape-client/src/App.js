@@ -48,13 +48,11 @@ class App extends React.Component {
                   exact
                   path='/login'
                   component={Login}
-                  authenticated={authenticated}
                 />
                 <AuthRoute
                   exact
                   path='/signup'
                   component={Signup}
-                  authenticated={authenticated}
                 />
               </Switch>
             </div>
