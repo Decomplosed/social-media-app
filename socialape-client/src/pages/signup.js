@@ -182,4 +182,4 @@ Signup.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(Signup)
+export default connect()(withStyles(styles)(Signup))
