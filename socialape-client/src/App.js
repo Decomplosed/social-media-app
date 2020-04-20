@@ -7,6 +7,7 @@ import jwtDecode from 'jwt-decode'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import { SET_AUTHENTICATED } from './redux/types'
+import { logoutUser, getUserData } from './redux/actions/userActions'
 
 import Home from './pages/Home'
 import Login from './pages/Login'
