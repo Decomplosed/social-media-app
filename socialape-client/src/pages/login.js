@@ -58,8 +58,6 @@ class Login extends Component {
       password: this.state.password,
     }
 
-    console.log(this.props.history)
-
     this.props.loginUser(userData, this.props.history)
   }
 
@@ -154,7 +152,6 @@ const mapActionsToProps = {
   loginUser,
 }
 
-export default connect(
-  mapStateToProps,
-  mapActionsToProps
-)(withStyles(styles)(Login))
+export default withRouter(
+  connect(mapStateToProps, mapActionsToProps)(withStyles(styles)(Login))
+)
