@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
 
-const AuthRoute = ({ component: Component, authentidated, ...rest }) => (
+const AuthRoute = ({ component: Component, authenticated, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      authentidated ? <Redirect to='/' /> : <Component {...rest} />
+      authenticated ? <Redirect to='/' /> : <Component {...rest} />
     }
   />
 )
