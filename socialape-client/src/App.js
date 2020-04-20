@@ -21,16 +21,17 @@ import './App.css'
 
 const theme = createMuiTheme(themeObject)
 const token = localStorage.FBIdToken
-let authenticated
 
 if (token) {
   const decodedToken = jwtDecode(token)
 
   if (decodedToken.exp * 1000 < Date.now()) {
+    store.dispatch(logoutUser())
     window.location.href = '/login'
-    authenticated = false
   } else {
-    authenticated = true
+    store.dispatch({ type: SET_AUTHENTICATED })
+    axios.defaults.headers.common['Authorization'] = token
+    store.dispatch(getUserData())
   }
 }
 class App extends React.Component {
