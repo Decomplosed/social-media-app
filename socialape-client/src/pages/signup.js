@@ -54,12 +54,6 @@ class Signup extends Component {
     }
   }
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    })
-  }
-
   handleSubmit = (event) => {
     event.preventDefault()
     this.setState({
@@ -73,19 +67,13 @@ class Signup extends Component {
       handle: this.state.handle,
     }
 
-    axios
-      .post('/signup', newUserData)
-      .then((res) => {
-        localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`)
-        this.setState({ loading: false })
-        this.props.history.push('/')
-      })
-      .catch((err) => {
-        this.setState({
-          errors: err.response.data,
-          loading: false,
-        })
-      })
+    this.props.signupUser(newUserData, this.props.history)
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
   }
 
   render() {
