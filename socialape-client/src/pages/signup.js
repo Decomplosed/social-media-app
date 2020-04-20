@@ -182,4 +182,7 @@ Signup.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default connect()(withStyles(styles)(Signup))
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(withStyles(styles)(Signup))
