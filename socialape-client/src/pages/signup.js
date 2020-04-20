@@ -182,7 +182,12 @@ Signup.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
+const mapStateToProps = (state) => ({
+  user: state.user,
+  UI: state.UI,
+})
+
 export default connect(
   mapStateToProps,
-  mapActionsToProps
+  
 )(withStyles(styles)(Signup))
