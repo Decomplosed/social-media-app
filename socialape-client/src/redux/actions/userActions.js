@@ -10,13 +10,13 @@ export const loginUser = (userData, history) => (dispatch) => {
       const FBIdToken = `Bearer ${res.data.token}`
 
       localStorage.setItem('FBIdToken', FBIdToken)
-      this.setState({ loading: false })
-      axios.defaults.header.common['Authorization'] = FBIdToken
+      axios.defaults.headers.common['Authorization'] = FBIdToken
       dispatch(getUserData())
       dispatch({ type: CLEAR_ERRORS })
       history.push('/')
     })
     .catch((err) => {
+      console.log(err.response.data)
       dispatch({
         type: SET_ERRORS,
         payload: err.response.data,

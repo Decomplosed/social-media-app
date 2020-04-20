@@ -50,12 +50,6 @@ class Login extends Component {
     }
   }
 
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value,
-    })
-  }
-
   handleSubmit = (event) => {
     event.preventDefault()
 
@@ -64,7 +58,15 @@ class Login extends Component {
       password: this.state.password,
     }
 
+    console.log(this.props.history)
+
     this.props.loginUser(userData, this.props.history)
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
   }
 
   render() {
