@@ -11,4 +11,4 @@ const AuthRoute = ({ component: Component, authenticated, ...rest }) => (
   />
 )
 
-export default AuthRoute
+export default connect(mapStateToProps)(AuthRoute)
