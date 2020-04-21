@@ -16,4 +16,9 @@ const mapStateToProps = (state) => ({
   user: state.user,
 })
 
+Profile.propTypes = {
+  user: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+}
+
 export default connect(mapStateToProps)(withStyles(styles)(Profile))
