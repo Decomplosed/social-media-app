@@ -84,8 +84,12 @@ class Profile extends Component {
               <input
                 type='file'
                 id='image-input'
+                hidden='hidden'
                 onChange={this.handleImageChange}
               />
+              <IconButton onClick={this.handleEditPicture} className='button'>
+                <EditIcon color='primary' />
+              </IconButton>
             </div>
             <hr />
             <div className='profile-details'>
