@@ -86,8 +86,21 @@ class Profile extends Component {
     {bio && <Typography variant='body2'>{bio}</Typography>}
     <hr />
     {location && (
-
+      <Fragment>
+        <LoactionOn color='primary' /> <span>{location}</span>
+        <hr />
+      </Fragment>
     )}
+    {website && (
+      <Fragment>
+        <LinkIcon color='primary' />
+        <a href={website} target='_blank' rel='noopener noreferrer'>
+          {' '}{website}
+        </a>
+        <hr />
+      </Fragment>
+    )}
+    
           </div>
         </div>
       </Paper>
