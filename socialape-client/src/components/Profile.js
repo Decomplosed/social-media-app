@@ -12,4 +12,8 @@ class Profile extends Component {
   }
 }
 
-export default withStyles(styles)(Profile)
+const mapStateToProps = (state) => ({
+  user: state.user,
+})
+
+export default connect(mapStateToProps)(withStyles(styles)(Profile))
