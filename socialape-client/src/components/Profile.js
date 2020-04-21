@@ -127,6 +127,14 @@ class Profile extends Component {
             >
               Login
             </Button>
+            <Button
+              variant='contained'
+              color='secondary'
+              component={Link}
+              to='/signup'
+            >
+              Signup
+            </Button>
           </div>
         </Paper>
       )
