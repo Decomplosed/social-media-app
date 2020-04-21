@@ -14,7 +14,7 @@ import CalendarToday from '@material-ui/icons/CalendarToday'
 import { connect } from 'react-redux'
 import { Paper, Typography } from '@material-ui/core'
 
-const styles = {
+const styles = (theme) => ({
   paper: {
     padding: 20,
   },
@@ -60,7 +60,7 @@ const styles = {
       margin: '20px 10px',
     },
   },
-}
+})
 
 class Profile extends Component {
   render() {
