@@ -78,7 +78,7 @@ class Profile extends Component {
         <Paper className={classes.paper}>
           <div className={classes.profile}>
             <div className='image-wrapper'>
-              <img src={imageUrl} alt='Prfile' classname='profile-image' />
+              <img src={imageUrl} alt='Prfile' className='profile-image' />
             </div>
             <hr />
             <div className='profile-details'>
@@ -101,9 +101,8 @@ class Profile extends Component {
               )}
               {website && (
                 <Fragment>
-                  <LinkIcon color='primary' />
+                  <LinkIcon color='primary' />{' '}
                   <a href={website} target='_blank' rel='noopener noreferrer'>
-                    {' '}
                     {website}
                   </a>
                   <hr />
