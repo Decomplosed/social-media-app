@@ -70,7 +70,30 @@ class Profile extends Component {
         loading,
       },
     } = this.props
-    return <div></div>
+
+    let profileMarkup = !loading ? (authenticated ? (
+      <Paper className={classes.paper}>
+        <div className={classes.profile}>
+          <div className="profile-image">
+            <img src={imageUrl} alt="Prfile"/>
+          </div>
+          <hr />
+          <div className="profile-details">
+            <MuiLink component={Link} to={`/users/${handle}`} color='primary' variant='h5'>
+              @{handle}
+            </MuiLink>
+            <hr />
+    {bio && <Typography variant='body2'>{bio}</Typography>}
+    <hr />
+    {location && (
+
+    )}
+          </div>
+        </div>
+      </Paper>
+    ) : ()) : (<p>Loading...</p>)
+
+    return profileMarkup
   }
 }
 
