@@ -17,6 +17,8 @@ import EditIcon from '@material-ui/icons/Edit'
 import { connect } from 'react-redux'
 import { Paper, Typography } from '@material-ui/core'
 
+import { logoutUser, uploadImage } from '../redux/actions/userActions'
+
 const styles = (theme) => ({
   paper: {
     padding: 20,
