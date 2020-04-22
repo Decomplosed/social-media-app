@@ -181,6 +181,8 @@ const mapStateToProps = (state) => ({
   user: state.user,
 })
 
+const mapActionsToProps = { logoutUser, uploadImage }
+
 Profile.propTypes = {
   user: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
