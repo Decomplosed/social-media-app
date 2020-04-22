@@ -27,6 +27,10 @@ EditDetails.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
+const mapStateToProps = (state) => ({
+  credentials: state.user.credentials,
+})
+
 export default connect(mapStateToProps, { editUserDetails })(
   withStyles(styles)(EditDetails)
 )
