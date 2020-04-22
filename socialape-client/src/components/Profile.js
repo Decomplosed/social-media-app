@@ -143,6 +143,11 @@ class Profile extends Component {
               <CalendarToday color='primary' />
               <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
             </div>
+            <Tooltip title='Logout' placement='top'>
+              <IconButton onClick={this.handleLogout}>
+                <KeyboardReturn color='primary' />
+              </IconButton>
+            </Tooltip>
           </div>
         </Paper>
       ) : (
