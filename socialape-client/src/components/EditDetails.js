@@ -15,6 +15,11 @@ class EditDetails extends Component {
   }
 }
 
+EditDetails.propTypes = {
+  editUserDetails: PropTypes.func.isRequired,
+  classes: PropTypes.object.isRequired,
+}
+
 export default connect(mapStateToProps, { editUserDetails })(
   withStyles(styles)(EditDetails)
 )
