@@ -84,6 +84,10 @@ class Profile extends Component {
     fileInput.click()
   }
 
+  handleLogout = () => {
+    this.props.logoutUser()
+  }
+
   render() {
     const {
       classes,
