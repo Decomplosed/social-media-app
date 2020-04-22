@@ -10,6 +10,13 @@ const styles = (theme) => ({
 })
 
 class EditDetails extends Component {
+  state = {
+    bio: '',
+    website: '',
+    location: '',
+    open: false,
+  }
+
   render() {
     return <div></div>
   }
