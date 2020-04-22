@@ -190,4 +190,7 @@ Profile.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default connect(mapStateToProps)(withStyles(styles)(Profile))
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(withStyles(styles)(Profile))
