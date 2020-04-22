@@ -15,4 +15,6 @@ class EditDetails extends Component {
   }
 }
 
-export default EditDetails
+export default connect(mapStateToProps, { editUserDetails })(
+  withStyles(styles)(EditDetails)
+)
