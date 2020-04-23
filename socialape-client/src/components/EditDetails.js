@@ -19,6 +19,9 @@ import {
 
 const styles = (theme) => ({
   ...theme.globalStyles,
+  button: {
+    float: 'right',
+  },
 })
 
 class EditDetails extends Component {
