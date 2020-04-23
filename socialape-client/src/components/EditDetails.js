@@ -29,6 +29,14 @@ class EditDetails extends Component {
     open: false,
   }
 
+  mapUserDetailsToState = (credentials) => {
+    this.setState({
+      bio: credentials.bio ? credentials.bio : '',
+      website: credentials.website ? credentials.website : '',
+      location: credentials.location ? credentials.location : '',
+    })
+  }
+
   handleOpen = () => {
     this.setState({
       open: true,
@@ -43,14 +51,6 @@ class EditDetails extends Component {
     const { credentials } = this.props
 
     this.mapUserDetailsToState(credentials)
-  }
-
-  mapUserDetailsToState = (credentials) => {
-    this.setState({
-      bio: credentials.bio ? credentials.bio : '',
-      website: credentials.website ? credentials.website : '',
-      location: credentials.location ? credentials.location : '',
-    })
   }
 
   handleChange = (event) => {
