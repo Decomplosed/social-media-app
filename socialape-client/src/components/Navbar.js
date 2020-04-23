@@ -27,4 +27,4 @@ export class Navbar extends Component {
   }
 }
 
-export default Navbar
+export default connect()(Navbar)
