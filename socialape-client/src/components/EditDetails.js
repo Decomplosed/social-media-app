@@ -60,6 +60,14 @@ class EditDetails extends Component {
     })
   }
 
+  handleSubmit = () => {
+    const userDetails = {
+      bio: this.state.bio,
+      website: this.state.website,
+      location: this.state.location,
+    }
+  }
+
   render() {
     const { classes } = this.props
     const { bio, website, location, open } = this.state
