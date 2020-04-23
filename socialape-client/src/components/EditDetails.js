@@ -54,6 +54,12 @@ class EditDetails extends Component {
     })
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
+  }
+
   render() {
     const { classes } = this.props
     const { bio, website, location, open } = this.state
