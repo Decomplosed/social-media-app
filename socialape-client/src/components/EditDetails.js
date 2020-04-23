@@ -38,11 +38,15 @@ class EditDetails extends Component {
 
   componentDidMount() {
     const { credentials } = this.props
+
+    this.mapUserDetailsToState(credentials)
+  }
+
+  mapUserDetailsToState = (credentials) => {
     this.setState({
       bio: credentials.bio ? credentials.bio : '',
       website: credentials.website ? credentials.website : '',
-      loaction: credentials.loaction ? credentials.loaction : '',
-    })
+      location: credentials.location ? credentials.location : ''
   }
 
   render() {
