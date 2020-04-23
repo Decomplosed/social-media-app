@@ -13,32 +13,9 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import { connect } from 'react-redux'
 import { loginUser } from '../redux/actions/userActions'
 
-const styles = {
-  form: {
-    textAlign: 'center',
-  },
-  image: {
-    margin: '20px auto',
-  },
-  pageTitle: {
-    margin: '5px auto',
-  },
-  textField: {
-    margin: '5px auto',
-  },
-  button: {
-    margin: '20px auto 10px',
-    position: 'relative',
-  },
-  customError: {
-    color: 'red',
-    fontSize: '0.8rem',
-    marginTop: 10,
-  },
-  progress: {
-    position: 'absolute',
-  },
-}
+const styles = (theme) => ({
+  ...theme.spreadThis,
+})
 
 class Login extends Component {
   constructor() {
