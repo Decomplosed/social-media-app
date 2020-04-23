@@ -37,7 +37,7 @@ class EditDetails extends Component {
   }
 
   handleClose = () => {
-    this.setState({open: false})
+    this.setState({ open: false })
   }
 
   componentDidMount() {
@@ -50,7 +50,8 @@ class EditDetails extends Component {
     this.setState({
       bio: credentials.bio ? credentials.bio : '',
       website: credentials.website ? credentials.website : '',
-      location: credentials.location ? credentials.location : ''
+      location: credentials.location ? credentials.location : '',
+    })
   }
 
   render() {
