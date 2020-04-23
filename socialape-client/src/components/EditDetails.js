@@ -65,12 +65,7 @@ class EditDetails extends Component {
             <EditIcon color='primary' />
           </IconButton>
         </Tooltip>
-        <Dialog
-          open={this.state.open}
-          onClose={this.handleClose}
-          fullWidth
-          maxWidth='sm'
-        >
+        <Dialog open={open} onClose={this.handleClose} fullWidth maxWidth='sm'>
           <DialogTitle>Edit your details</DialogTitle>
           <DialogContentText>
             <form>
@@ -82,7 +77,7 @@ class EditDetails extends Component {
                 rows='3'
                 placeholder='A short bio about yourself'
                 className={classes.textField}
-                value={this.state.bio}
+                value={bio}
                 onChange={this.onChange}
                 fullWidth
               />
@@ -92,7 +87,7 @@ class EditDetails extends Component {
                 label='Website'
                 placeholder='Your personal/professional website'
                 className={classes.textField}
-                value={this.state.website}
+                value={website}
                 onChange={this.onChange}
                 fullWidth
               />
@@ -102,7 +97,7 @@ class EditDetails extends Component {
                 label='Location'
                 placeholder='Where you live'
                 className={classes.textField}
-                value={this.state.location}
+                value={location}
                 onChange={this.onChange}
                 fullWidth
               />
