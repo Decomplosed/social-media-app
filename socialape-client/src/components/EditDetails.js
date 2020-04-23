@@ -56,6 +56,7 @@ class EditDetails extends Component {
 
   render() {
     const { classes } = this.props
+    const { bio, website, location } = this.state
 
     return (
       <Fragment>
