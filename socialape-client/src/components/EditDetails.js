@@ -16,6 +16,8 @@ import {
   DialogTitle,
 } from '@material-ui/core'
 
+import { EditIcon } from '@material-ui/icons'
+
 const styles = (theme) => ({
   ...theme.globalStyles,
 })
