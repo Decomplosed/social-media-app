@@ -86,22 +86,22 @@ class EditDetails extends Component {
                 fullWidth
               />
               <TextField
-                name='bio'
+                name='website'
                 type='text'
-                label='Bio'
-                placeholder='A short bio about yourself'
+                label='Website'
+                placeholder='Your personal/professional website'
                 className={classes.textField}
-                value={this.state.bio}
+                value={this.state.website}
                 onChange={this.onChange}
                 fullWidth
               />
               <TextField
-                name='bio'
+                name='location'
                 type='text'
-                label='Bio'
-                placeholder='A short bio about yourself'
+                label='Location'
+                placeholder='Where you live'
                 className={classes.textField}
-                value={this.state.bio}
+                value={this.state.location}
                 onChange={this.onChange}
                 fullWidth
               />
