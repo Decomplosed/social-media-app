@@ -20,7 +20,9 @@ class EditDetails extends Component {
   componentDidMount() {
     const { credentials } = this.props
     this.setState({
-      bio: credentials.bio,
+      bio: credentials.bio ? credentials.bio : '',
+      website: credentials.website ? credentials.website : '',
+      loaction: credentials.loaction ? credentials.loaction : '',
     })
   }
 
