@@ -17,6 +17,13 @@ class EditDetails extends Component {
     open: false,
   }
 
+  componentDidMount() {
+    const { credentials } = this.props
+    this.setState({
+      bio: credentials.bio,
+    })
+  }
+
   render() {
     return <div></div>
   }
