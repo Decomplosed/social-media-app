@@ -13,7 +13,6 @@ import {
   TextField,
   Dialog,
   DialogContent,
-  DialogContentText,
   DialogActions,
   DialogTitle,
 } from '@material-ui/core'
