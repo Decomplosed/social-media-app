@@ -36,6 +36,10 @@ class EditDetails extends Component {
     })
   }
 
+  handleClose = () => {
+    this.setState({open: false})
+  }
+
   componentDidMount() {
     const { credentials } = this.props
 
