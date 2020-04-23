@@ -84,7 +84,7 @@ class EditDetails extends Component {
                 placeholder='A short bio about yourself'
                 className={classes.textField}
                 value={bio}
-                onChange={this.onChange}
+                onChange={this.handleChange}
                 fullWidth
               />
               <TextField
@@ -94,7 +94,7 @@ class EditDetails extends Component {
                 placeholder='Your personal/professional website'
                 className={classes.textField}
                 value={website}
-                onChange={this.onChange}
+                onChange={this.handleChange}
                 fullWidth
               />
               <TextField
@@ -104,7 +104,7 @@ class EditDetails extends Component {
                 placeholder='Where you live'
                 className={classes.textField}
                 value={location}
-                onChange={this.onChange}
+                onChange={this.handleChange}
                 fullWidth
               />
             </form>
