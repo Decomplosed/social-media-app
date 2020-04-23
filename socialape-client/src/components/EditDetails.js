@@ -73,7 +73,7 @@ class EditDetails extends Component {
         </Tooltip>
         <Dialog open={open} onClose={this.handleClose} fullWidth maxWidth='sm'>
           <DialogTitle>Edit your details</DialogTitle>
-          <DialogContentText>
+          <DialogContent>
             <form>
               <TextField
                 name='bio'
@@ -108,7 +108,10 @@ class EditDetails extends Component {
                 fullWidth
               />
             </form>
-          </DialogContentText>
+          </DialogContent>
+          <DialogAxctions>
+            
+          </DialogAxctions>
         </Dialog>
       </Fragment>
     )
