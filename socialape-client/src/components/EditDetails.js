@@ -5,7 +5,7 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import { connect } from 'react-redux'
 import { editUserDetails } from '../redux/actions/userActions'
 
-import { EditIcon } from '@material-ui/icons'
+import EditIcon from '@material-ui/icons/Edit'
 import {
   Tooltip,
   IconButton,
