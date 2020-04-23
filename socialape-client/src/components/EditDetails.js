@@ -66,6 +66,8 @@ class EditDetails extends Component {
       website: this.state.website,
       location: this.state.location,
     }
+    this.props.editUserDetails(userDetails)
+    this.handleClose()
   }
 
   render() {
