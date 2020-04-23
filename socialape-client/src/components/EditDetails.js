@@ -4,6 +4,17 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 import { connect } from 'react-redux'
 import { editUserDetails } from '../redux/actions/userActions'
+import {
+  Tooltip,
+  IconButton,
+  Button,
+  TextField,
+  Dialog,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  DialogTitle,
+} from '@material-ui/core'
 
 const styles = (theme) => ({
   ...theme.globalStyles,
