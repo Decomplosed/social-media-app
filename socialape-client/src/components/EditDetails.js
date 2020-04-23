@@ -4,6 +4,8 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 import { connect } from 'react-redux'
 import { editUserDetails } from '../redux/actions/userActions'
+
+import { EditIcon } from '@material-ui/icons'
 import {
   Tooltip,
   IconButton,
@@ -16,8 +18,6 @@ import {
   DialogTitle,
 } from '@material-ui/core'
 
-import { EditIcon } from '@material-ui/icons'
-
 const styles = (theme) => ({
   ...theme.globalStyles,
 })
@@ -28,6 +28,12 @@ class EditDetails extends Component {
     website: '',
     location: '',
     open: false,
+  }
+
+  handleOpen = () => {
+    this.setState({
+      open: true,
+    })
   }
 
   componentDidMount() {
