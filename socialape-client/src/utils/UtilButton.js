@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tooltip, IconButton } from '@material-ui/core'
 
-const Button = ({ children, onClick, btnClassName, tipClassName, tip }) => (
+const UtilButton = ({ children, onClick, btnClassName, tipClassName, tip }) => (
   <Tooltip title={tip} className={tipClassName}>
     <IconButton onClick={onClick} className={btnClassName}>
       {children}
@@ -9,4 +9,4 @@ const Button = ({ children, onClick, btnClassName, tipClassName, tip }) => (
   </Tooltip>
 )
 
-export default Button
+export default UtilButton
