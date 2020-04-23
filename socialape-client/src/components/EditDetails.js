@@ -64,6 +64,50 @@ class EditDetails extends Component {
             <EditIcon color='primary' />
           </IconButton>
         </Tooltip>
+        <Dialog
+          open={this.state.open}
+          onClose={this.handleClose}
+          fullWidth
+          maxWidth='sm'
+        >
+          <DialogTitle>Edit your details</DialogTitle>
+          <DialogContentText>
+            <form>
+              <TextField
+                name='bio'
+                type='text'
+                label='Bio'
+                multiline
+                rows='3'
+                placeholder='A short bio about yourself'
+                className={classes.textField}
+                value={this.state.bio}
+                onChange={this.onChange}
+                fullWidth
+              />
+              <TextField
+                name='bio'
+                type='text'
+                label='Bio'
+                placeholder='A short bio about yourself'
+                className={classes.textField}
+                value={this.state.bio}
+                onChange={this.onChange}
+                fullWidth
+              />
+              <TextField
+                name='bio'
+                type='text'
+                label='Bio'
+                placeholder='A short bio about yourself'
+                className={classes.textField}
+                value={this.state.bio}
+                onChange={this.onChange}
+                fullWidth
+              />
+            </form>
+          </DialogContentText>
+        </Dialog>
       </Fragment>
     )
   }
