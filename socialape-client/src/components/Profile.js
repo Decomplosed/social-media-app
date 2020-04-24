@@ -68,11 +68,15 @@ class Profile extends Component {
                 hidden='hidden'
                 onChange={this.handleImageChange}
               />
-              <Tooltip title='Edit Profile Picture' placement='top'>
+              <UtilButton
+                tip='Edit Profile Picture'
+                onClick={this.handleEditPicture}
+                btnClassName='button'
+              >
                 <IconButton onClick={this.handleEditPicture} className='button'>
                   <EditIcon color='primary' />
                 </IconButton>
-              </Tooltip>
+              </UtilButton>
             </div>
             <hr />
             <div className='profile-details'>
