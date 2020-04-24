@@ -23,15 +23,15 @@ export class Navbar extends Component {
           {authenticated ? (
             <Fragment>
               <UtilButton tip='Post a scream'>
-                <AddIcon color='primary' />
+                <AddIcon />
               </UtilButton>
               <UtilButton tip='Home'>
                 <Link to='/'>
-                  <HomeIcon color='primary' />
+                  <HomeIcon />
                 </Link>
               </UtilButton>
               <UtilButton tip='Notifications'>
-                <Notifications color='primary' />
+                <Notifications />
               </UtilButton>
             </Fragment>
           ) : (
