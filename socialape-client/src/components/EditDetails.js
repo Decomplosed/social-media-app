@@ -79,11 +79,11 @@ class EditDetails extends Component {
 
     return (
       <Fragment>
-        <Tooltip title='Edit details' placemen='top'>
+        <UtilButton tip='Edit details'>
           <IconButton onClick={this.handleOpen} className={classes.button}>
             <EditIcon color='primary' />
           </IconButton>
-        </Tooltip>
+        </UtilButton>
         <Dialog open={open} onClose={this.handleClose} fullWidth maxWidth='sm'>
           <DialogTitle>Edit your details</DialogTitle>
           <DialogContent>
