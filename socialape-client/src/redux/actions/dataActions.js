@@ -11,9 +11,9 @@ export const getScreams = () => (dispatch) => {
     .catch((err) => dispatch({ type: SET_SCREAMS, payload: [] }))
 }
 
-export const likeScream = (screamId) = (dispatch) => {
+export const likeScream = (screamId) => (dispatch) => {
   axios
     .get(`/scream/${screamId}/like`)
     .then((res) => dispatch({ type: LIKE_SCREAM, payload: res.data }))
-    .catch(err => console.log(err))
-})
+    .catch((err) => console.log(err))
+}
