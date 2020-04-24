@@ -7,6 +7,7 @@ import {
   SET_UNAUTHENTICATED,
   LOADING_USER,
   LIKE_SCREAM,
+  UNLIKE_SCREAM
 } from '../types'
 
 const initialState = {
