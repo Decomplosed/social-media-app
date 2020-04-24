@@ -8,7 +8,6 @@ import { editUserDetails } from '../redux/actions/userActions'
 
 import EditIcon from '@material-ui/icons/Edit'
 import {
-  Tooltip,
   IconButton,
   Button,
   TextField,
