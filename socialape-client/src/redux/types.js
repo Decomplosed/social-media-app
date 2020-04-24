@@ -8,3 +8,4 @@ export const LOADING_UI = 'LOADING_UI'
 export const CLEAR_ERRORS = 'CLEAR_ERRORS'
 
 export const SET_SCREAMS = 'SET_SCREAMS'
+export const SET_SCREAM = 'SET_SCREAM'
