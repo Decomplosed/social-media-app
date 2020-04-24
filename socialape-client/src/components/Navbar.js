@@ -22,7 +22,17 @@ export class Navbar extends Component {
         <Toolbar className='nav-container'>
           {authenticated ? (
             <Fragment>
-              <UtilButton tip='Post a scream' />
+              <UtilButton tip='Post a scream'>
+                <AddIcon color='primary' />
+              </UtilButton>
+              <UtilButton tip='Home'>
+                <Link to='/'>
+                  <HomeIcon color='primary' />
+                </Link>
+              </UtilButton>
+              <UtilButton tip='Notifications'>
+                <Notifications color='primary' />
+              </UtilButton>
             </Fragment>
           ) : (
             <Fragment>
