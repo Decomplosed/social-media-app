@@ -8,7 +8,6 @@ import UtilButton from '../utils/UtilButton'
 
 import Button from '@material-ui/core/Button'
 import MuiLink from '@material-ui/core/Link'
-import IconButton from '@material-ui/core/IconButton'
 
 import LoactionOn from '@material-ui/icons/LocationOn'
 import LinkIcon from '@material-ui/icons/Link'
@@ -72,9 +71,7 @@ class Profile extends Component {
                 onClick={this.handleEditPicture}
                 btnClassName='button'
               >
-                <IconButton onClick={this.handleEditPicture} className='button'>
-                  <EditIcon color='primary' />
-                </IconButton>
+                <EditIcon color='primary' />
               </UtilButton>
             </div>
             <hr />
@@ -108,10 +105,12 @@ class Profile extends Component {
               <CalendarToday color='primary' />
               <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
             </div>
-            <UtilButton tip='Logout' onClick={this.handleLogout}>
-              <IconButton onClick={this.handleEditPicture} className='button'>
-                <KeyboardReturn color='primary' />
-              </IconButton>
+            <UtilButton
+              tip='Logout'
+              onClick={this.handleLogout}
+              btnClassName='button'
+            >
+              <KeyboardReturn color='primary' />
             </UtilButton>
             <EditDetails />
           </div>

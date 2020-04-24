@@ -8,7 +8,6 @@ import { editUserDetails } from '../redux/actions/userActions'
 
 import EditIcon from '@material-ui/icons/Edit'
 import {
-  IconButton,
   Button,
   TextField,
   Dialog,
@@ -78,10 +77,12 @@ class EditDetails extends Component {
 
     return (
       <Fragment>
-        <UtilButton tip='Edit details'>
-          <IconButton onClick={this.handleOpen} className={classes.button}>
-            <EditIcon color='primary' />
-          </IconButton>
+        <UtilButton
+          tip='Edit details'
+          onClick={this.handleOpen}
+          btnClassName={classes.button}
+        >
+          <EditIcon color='primary' />
         </UtilButton>
         <Dialog open={open} onClose={this.handleClose} fullWidth maxWidth='sm'>
           <DialogTitle>Edit your details</DialogTitle>
