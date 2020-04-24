@@ -19,6 +19,14 @@ export default function (state = initialState, action) {
         screams: action.payload,
         loading: false,
       }
+    case LIKE_SCREAM:
+      let index = state.screams.findIndex(
+        (scream) => scream.screamId === action.payload.screamId
+      )
+      state.scream[index] = action.payload
+      return {
+        ...state
+      }
     default:
       return state
   }
