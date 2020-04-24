@@ -13,6 +13,12 @@ export default function (state = initialState, action) {
         ...state,
         loading: true,
       }
+    case SET_SCREAMS:
+      return {
+        ...state,
+        screams: action.payload,
+        loading: false,
+      }
     default:
       return state
   }
