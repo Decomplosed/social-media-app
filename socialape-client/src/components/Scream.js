@@ -71,4 +71,12 @@ export class Scream extends React.Component {
   }
 }
 
-export default connect()(withStyles(styles)(Scream))
+const mapStateToProps = state => ({
+  user: state.user,
+})
+
+
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(withStyles(styles)(Scream))
