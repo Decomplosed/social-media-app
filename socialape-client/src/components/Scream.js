@@ -69,7 +69,7 @@ export class Scream extends React.Component {
       user: { authenticated },
     } = this.props
 
-    const likeButton = !authentidated ? (
+    const likeButton = !authenticated ? (
       <UtilButton tip='Like'>
         <Link to='/login'>
           <FavoriteBorder colot='primary' />
