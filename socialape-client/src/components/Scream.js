@@ -69,7 +69,19 @@ export class Scream extends React.Component {
       user: { authenticated },
     } = this.props
 
-    const likeButton = !authentidated
+    const likeButton = !authentidated ? (
+      <UtilButton tip='Like'>
+        <Link to='/login'>
+          <FavoriteBorder colot='primary' />
+        </Link>
+      </UtilButton>
+    ) : (
+      this.likedScream() ? (
+        <UtilButton tip='Undo Like' onClick={this.unlikeScream}>
+          <FavoriteIcon color='primary' />
+        </UtilButton>
+      )
+    )
 
     return (
       <Card className={classes.card}>
