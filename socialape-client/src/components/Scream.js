@@ -71,10 +71,14 @@ export class Scream extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   user: state.user,
 })
 
+const mapActionsToProps = {
+  likeScream,
+  unlikeScream,
+}
 
 export default connect(
   mapStateToProps,
