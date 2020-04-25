@@ -10,16 +10,8 @@ import { connect } from 'react-redux'
 import { getScreams } from '../redux/actions/dataActions'
 
 export class Home extends React.Component {
-
   componentDidMount() {
-    axios
-      .get('/screams')
-      .then((res) => {
-        this.setState({
-          screams: res.data,
-        })
-      })
-      .catch((err) => console.log(err))
+    this.props.getScreams()
   }
 
   render() {
