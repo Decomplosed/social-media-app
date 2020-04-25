@@ -11,6 +11,8 @@ import CardMedia from '@material-ui/core/CardMedia'
 import CardContent from '@material-ui/core/CardContent'
 import Typography from '@material-ui/core/Typography'
 
+import ChatIcon from '@material-ui/icons/Chat'
+
 import { connect } from 'react-redux'
 import { likeScream, unlikeScream } from '../redux/actions/dataActions'
 
