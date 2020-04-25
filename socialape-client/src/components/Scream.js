@@ -71,6 +71,14 @@ export class Scream extends React.Component {
   }
 }
 
+Scream.propTypes = {
+  likeScream: PropTypes.func.isRequired,
+  unlikeScream: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired,
+  scream: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+}
+
 const mapStateToProps = (state) => ({
   user: state.user,
 })
