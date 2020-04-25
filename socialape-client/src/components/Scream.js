@@ -75,12 +75,14 @@ export class Scream extends React.Component {
           <FavoriteBorder colot='primary' />
         </Link>
       </UtilButton>
+    ) : this.likedScream() ? (
+      <UtilButton tip='Undo Like' onClick={this.unlikeScream}>
+        <FavoriteIcon color='primary' />
+      </UtilButton>
     ) : (
-      this.likedScream() ? (
-        <UtilButton tip='Undo Like' onClick={this.unlikeScream}>
-          <FavoriteIcon color='primary' />
-        </UtilButton>
-      )
+      <UtilButton tip='Like' onClick={this.likeScream}>
+        <FavoriteBorder color='primary' />
+      </UtilButton>
     )
 
     return (
