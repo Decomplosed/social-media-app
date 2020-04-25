@@ -47,6 +47,11 @@ export class Home extends React.Component {
   }
 }
 
+Home.propTypes = {
+  getScreams: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+}
+
 const mapStateToProps = (state) => ({
   data: state.data,
 })
