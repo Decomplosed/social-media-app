@@ -71,4 +71,4 @@ export class Scream extends React.Component {
   }
 }
 
-export default withStyles(styles)(Scream)
+export default connect()(withStyles(styles)(Scream))
