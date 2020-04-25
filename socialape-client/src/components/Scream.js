@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography'
 
 import ChatIcon from '@material-ui/icons/Chat'
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
+import FavoriteIcon from '@material-ui/icons/Favorite'
 
 import { connect } from 'react-redux'
 import { likeScream, unlikeScream } from '../redux/actions/dataActions'
