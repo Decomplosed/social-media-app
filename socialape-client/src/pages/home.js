@@ -10,9 +10,6 @@ import { connect } from 'react-redux'
 import { getScreams } from '../redux/actions/dataActions'
 
 export class Home extends React.Component {
-  state = {
-    screams: null,
-  }
 
   componentDidMount() {
     axios
