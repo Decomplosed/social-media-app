@@ -47,4 +47,8 @@ export class Home extends React.Component {
   }
 }
 
-export default Home
+const mapStateToProps = (state) => ({
+  data: state.data,
+})
+
+export default connect(mapStateToProps, { getScreams })(Home)
