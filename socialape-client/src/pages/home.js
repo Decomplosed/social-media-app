@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 
 import Scream from '../components/Scream'
