@@ -60,9 +60,9 @@ export class Scream extends React.Component {
         createdAt,
         userImage,
         userHandle,
-        // screamId,
-        // likeCount,
-        // commentCount,
+        screamId,
+        likeCount,
+        commentCount,
       },
     } = this.props
 
