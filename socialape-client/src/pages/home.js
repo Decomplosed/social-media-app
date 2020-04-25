@@ -15,6 +15,8 @@ export class Home extends React.Component {
   }
 
   render() {
+    const { screams, loading } = this.props.data
+
     let recentScreamsMarkup = this.state.screams ? (
       this.state.screams.map((scream) => (
         <Scream key={scream.screamId} scream={scream} />
