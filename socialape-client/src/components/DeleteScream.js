@@ -22,4 +22,6 @@ class DeleteScream extends Component {
   }
 }
 
-export default DeleteScream
+export default connect(mapStateToProps, { deleteScream })(
+  withStyles(styles)(DeleteScream)
+)
