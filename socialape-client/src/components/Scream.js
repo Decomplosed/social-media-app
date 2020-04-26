@@ -88,9 +88,10 @@ export class Scream extends React.Component {
       </UtilButton>
     )
 
-    const deleteButton = authenticated && userHandle === handle ? (
-      <DeleteScream />
-    ) : null
+    const deleteButton =
+      authenticated && userHandle === handle ? (
+        <DeleteScream screamId={screamId} />
+      ) : null
 
     return (
       <Card className={classes.card}>
