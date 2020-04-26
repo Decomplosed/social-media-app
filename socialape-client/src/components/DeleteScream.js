@@ -22,6 +22,10 @@ class DeleteScream extends Component {
   }
 }
 
-export default connect(mapStateToProps, { deleteScream })(
-  withStyles(styles)(DeleteScream)
-)
+DeleteScream.propTypes = {
+  deleteScream: PropTypes.func.isRequired,
+  classes: PropTypes.object.isRequired,
+  screamId: PropTypes.string.isRequired,
+}
+
+export default connect(null, { deleteScream })(withStyles(styles)(DeleteScream))
