@@ -64,8 +64,12 @@ export class Scream extends React.Component {
         userHandle,
         likeCount,
         commentCount,
+        screamId,
       },
-      user: { authenticated, credentiald: {handle} },
+      user: {
+        authenticated,
+        credentiald: { handle },
+      },
     } = this.props
 
     const likeButton = !authenticated ? (
