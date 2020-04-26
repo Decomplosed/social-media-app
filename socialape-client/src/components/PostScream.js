@@ -10,3 +10,6 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DeleteOutline from '@material-ui/icons/DeleteOutline'
+import CircularProgress from '@material-ui/core/CircularProgress'
+
+import { connect } from 'react-redux'
