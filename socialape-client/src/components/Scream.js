@@ -69,7 +69,7 @@ export class Scream extends React.Component {
       },
       user: {
         authenticated,
-        credentiald: { handle },
+        credentials: { handle },
       },
     } = this.props
 
