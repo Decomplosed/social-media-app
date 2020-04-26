@@ -11,6 +11,10 @@ import DeleteOutline from '@material-ui/icons/DeleteOutline'
 
 import { connect } from 'react-redux'
 
+const styles = (theme) => ({
+  ...theme.globalStyles,
+})
+
 class DeleteScream extends Component {
   render() {
     return <div></div>
