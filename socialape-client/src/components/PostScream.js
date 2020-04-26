@@ -14,3 +14,11 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 
 import { connect } from 'react-redux'
 import { postScream } from '../redux/actions/dataActions'
+
+class PostScream extends Component {
+  render() {
+    return <div></div>
+  }
+}
+
+export default PostScream
