@@ -9,6 +9,8 @@ import DialogTitle from '@material-ui/core/DialogTitle'
 import DialogActions from '@material-ui/core/DialogActions'
 import DeleteOutline from '@material-ui/icons/DeleteOutline'
 
+import { connect } from 'react-redux'
+
 class DeleteScream extends Component {
   render() {
     return <div></div>
