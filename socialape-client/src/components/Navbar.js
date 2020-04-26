@@ -24,7 +24,7 @@ export class Navbar extends Component {
           {authenticated ? (
             <Fragment>
               <UtilButton tip='Post a scream'>
-                <AddIcon />
+                <PostScream />
               </UtilButton>
               <UtilButton tip='Home'>
                 <Link to='/'>
