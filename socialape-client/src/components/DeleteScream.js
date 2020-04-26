@@ -17,6 +17,10 @@ const styles = (theme) => ({
 })
 
 class DeleteScream extends Component {
+  state = {
+    open: false
+  }
+
   render() {
     const { classes } = this.props
 
