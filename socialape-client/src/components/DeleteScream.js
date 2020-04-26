@@ -20,7 +20,17 @@ class DeleteScream extends Component {
   render() {
     const { classes } = this.props
 
-    return <div></div>
+    return (
+      <Fragment>
+        <UtilButton
+          tip='Delete scream'
+          onClick={this.handleOpen}
+          btnClassName={classes.deleteButton}
+        >
+          <DeleteOutline color='secondary' />
+        </UtilButton>
+      </Fragment>
+    )
   }
 }
 
