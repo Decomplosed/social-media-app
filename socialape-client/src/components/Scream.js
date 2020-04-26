@@ -84,6 +84,10 @@ export class Scream extends React.Component {
       </UtilButton>
     )
 
+    const deleteButton = authenticated && userHandle === handle ? (
+      <DeleteScream />
+    ) : null
+
     return (
       <Card className={classes.card}>
         <CardMedia
