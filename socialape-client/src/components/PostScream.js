@@ -61,6 +61,7 @@ class PostScream extends Component {
   }
 
   handleClose = () => {
+    this.props.clearErrors()
     this.setState({ open: false, errors: {} })
   }
 
