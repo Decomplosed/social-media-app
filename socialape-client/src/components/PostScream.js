@@ -41,11 +41,11 @@ class PostScream extends Component {
 
 PostScream.propTypes = {
   postScream: PropTypes.func.isRequired,
-  UI: PropTypes.object.isRequired,
+  loading: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => ({
-  UI: state.UI,
+  loading: state.UI.loading,
 })
 
 export default connect(mapStateToProps, { postScream })(
