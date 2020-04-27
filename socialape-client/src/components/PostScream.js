@@ -23,4 +23,9 @@ class PostScream extends Component {
   }
 }
 
+PostScream.propTypes = {
+  postScream: PropTypes.func.isRequired,
+  UI: PropTypes.object.isRequired,
+}
+
 export default connect((mapStateToProps, {postScream})withStyles(styles)(PostScream))
