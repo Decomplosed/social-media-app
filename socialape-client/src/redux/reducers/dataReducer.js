@@ -39,12 +39,11 @@ export default function (state = initialState, action) {
         ...state,
       }
     case DELETE_SCREAM:
-      index = state.screams.findIndex(
-        (scream) => scream.screamId === action.payload
-      )
-      state.screams.splice(index, 1)
       return {
         ...state,
+        screams: state.screams.filter(
+          (scream) => scream.screamId !== action.payload
+        ),
       }
     case POST_SCREAM:
       return {
