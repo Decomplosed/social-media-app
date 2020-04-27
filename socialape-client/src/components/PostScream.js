@@ -20,6 +20,17 @@ import { postScream } from '../redux/actions/dataActions'
 
 const styles = (theme) => ({
   ...theme.globalStyles,
+  submitButton: {
+    position: 'relative',
+  },
+  progressSpinner: {
+    position: 'absolute',
+  },
+  closeButton: {
+    position: 'absolute',
+    left: '92%',
+    top: '0%',
+  },
 })
 
 class PostScream extends Component {
