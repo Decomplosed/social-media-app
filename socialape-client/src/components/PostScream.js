@@ -48,6 +48,10 @@ class PostScream extends Component {
     this.setState({ open: false })
   }
 
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
   render() {
     const { errors, open } = this.state
     const {
