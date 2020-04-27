@@ -30,7 +30,7 @@ export const postScream = (newScream) => (dispatch) => {
         type: POST_SCREAM,
         payload: res.data,
       })
-      dispatch({ CLEAR_ERRORS })
+      dispatch(clearErrors())
     })
     .catch((err) => {
       dispatch({ type: SET_ERRORS, payload: err.response.data })
