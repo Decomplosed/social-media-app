@@ -4,6 +4,9 @@ import {
   LIKE_SCREAM,
   UNLIKE_SCREAM,
   DELETE_SCREAM,
+  POST_SCREAM,
+  CLEAR_ERRORS,
+  SET_ERRORS,
   LOADING_UI,
 } from '../types'
 import axios from 'axios'
