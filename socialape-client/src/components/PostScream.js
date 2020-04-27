@@ -24,6 +24,10 @@ class PostScream extends Component {
     errors: {},
   }
 
+  handleOpen = () => {
+    this.setState({ open: true })
+  }
+
   render() {
     return <div></div>
   }
