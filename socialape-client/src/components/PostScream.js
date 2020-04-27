@@ -57,6 +57,39 @@ class PostScream extends Component {
           >
             <CloseIcon />
           </UtilButton>
+          <DialogTitle>Post a new Scream!</DialogTitle>
+          <DialogContent>
+            <form onSubmit={this.handleSubmit}>
+              <TextField
+                name='body'
+                type='text'
+                label='Scream!'
+                multiline
+                rows='3'
+                placeholder='Scream at your fellow apes!'
+                error={errors.body ? true : false}
+                helperText={errors.body}
+                className={classes.textField}
+                onChange={this.handleChange}
+                fullWidth
+              />
+              <Button
+                type='submit'
+                variant='contained'
+                color='primary'
+                className={classes.submitButton}
+                disabled={loading}
+              >
+                Submit
+                {loading && (
+                  <CircularProgress
+                    size={20}
+                    className={classes.progressSpinner}
+                  />
+                )}
+              </Button>
+            </form>
+          </DialogContent>
         </Dialog>
       </Fragment>
     )
