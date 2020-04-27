@@ -35,7 +35,7 @@ class PostScream extends Component {
   }
 
   render() {
-    const { errors } = this.state
+    const { errors, open } = this.state
     const {
       classes,
       UI: { loading },
@@ -46,6 +46,12 @@ class PostScream extends Component {
         <UtilButton onClick={this.handleOpen} tip='Post a Scream!'>
           <AddIcon />
         </UtilButton>
+        <Dialog
+          open={open}
+          onClose={this.handleClose}
+          fullWidth
+          maxWidth='sm'
+        ></Dialog>
       </Fragment>
     )
   }
