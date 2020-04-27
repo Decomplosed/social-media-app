@@ -41,7 +41,13 @@ class PostScream extends Component {
       UI: { loading },
     } = this.props
 
-    return <div></div>
+    return (
+      <Fragment>
+        <UtilButton onClick={this.handleOpen} tip='Post a Scream!'>
+          <AddIcon />
+        </UtilButton>
+      </Fragment>
+    )
   }
 }
 
