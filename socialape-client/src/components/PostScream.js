@@ -21,4 +21,4 @@ class PostScream extends Component {
   }
 }
 
-export default PostScream
+export default connect((mapStateToProps, {postScream})withStyles(styles)(PostScream))
