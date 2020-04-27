@@ -18,7 +18,9 @@ import CloseIcon from '@material-ui/icons/Close'
 import { connect } from 'react-redux'
 import { postScream } from '../redux/actions/dataActions'
 
-const styles = {}
+const styles = (theme) => ({
+  ...theme.globalStyles,
+})
 
 class PostScream extends Component {
   state = {
