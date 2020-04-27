@@ -46,6 +46,12 @@ class PostScream extends Component {
         errors: nextProps.UI.errors,
       })
     }
+
+    if (!nextProps.UI.errors && !nextProps.UI.loading) {
+      this.setState({ body: '' })
+
+      this.handleClose()
+    }
   }
 
   handleOpen = () => {
