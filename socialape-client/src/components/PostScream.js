@@ -12,6 +12,8 @@ import DialogContent from '@material-ui/core/DialogContent'
 import DeleteOutline from '@material-ui/icons/DeleteOutline'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
+import AddIcon from '@material-ui/icons/Add'
+
 import { connect } from 'react-redux'
 import { postScream } from '../redux/actions/dataActions'
 
