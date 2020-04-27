@@ -4,6 +4,7 @@ import {
   UNLIKE_SCREAM,
   LOADING_DATA,
   DELETE_SCREAM,
+  POST_SCREAM,
 } from '../types'
 
 const initialState = {
