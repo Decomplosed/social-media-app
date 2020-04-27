@@ -28,4 +28,8 @@ PostScream.propTypes = {
   UI: PropTypes.object.isRequired,
 }
 
+const mapStateToProps = state = ({
+  UI: state.UI
+})
+
 export default connect((mapStateToProps, {postScream})withStyles(styles)(PostScream))
