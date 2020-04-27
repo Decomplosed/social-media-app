@@ -16,7 +16,7 @@ import AddIcon from '@material-ui/icons/Add'
 import CloseIcon from '@material-ui/icons/Close'
 
 import { connect } from 'react-redux'
-import { postScream } from '../redux/actions/dataActions'
+import { postScream, clearErrors } from '../redux/actions/dataActions'
 
 const styles = (theme) => ({
   ...theme.globalStyles,
