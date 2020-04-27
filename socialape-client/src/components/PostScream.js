@@ -33,6 +33,8 @@ class PostScream extends Component {
   }
 
   render() {
+    const { errors } = this.state
+
     return <div></div>
   }
 }
