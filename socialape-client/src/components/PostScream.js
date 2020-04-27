@@ -34,6 +34,10 @@ class PostScream extends Component {
 
   render() {
     const { errors } = this.state
+    const {
+      classes,
+      UI: { loading },
+    } = this.props
 
     return <div></div>
   }
@@ -41,11 +45,11 @@ class PostScream extends Component {
 
 PostScream.propTypes = {
   postScream: PropTypes.func.isRequired,
-  loading: PropTypes.object.isRequired,
+  UI: PropTypes.object.isRequired,
 }
 
 const mapStateToProps = (state) => ({
-  loading: state.UI.loading,
+  UI: state.UI,
 })
 
 export default connect(mapStateToProps, { postScream })(
