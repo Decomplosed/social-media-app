@@ -13,6 +13,7 @@ import DeleteOutline from '@material-ui/icons/DeleteOutline'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 import AddIcon from '@material-ui/icons/Add'
+import CloseIcon from '@material-ui/icons/Close'
 
 import { connect } from 'react-redux'
 import { postScream } from '../redux/actions/dataActions'
@@ -46,12 +47,15 @@ class PostScream extends Component {
         <UtilButton onClick={this.handleOpen} tip='Post a Scream!'>
           <AddIcon />
         </UtilButton>
-        <Dialog
-          open={open}
-          onClose={this.handleClose}
-          fullWidth
-          maxWidth='sm'
-        ></Dialog>
+        <Dialog open={open} onClose={this.handleClose} fullWidth maxWidth='sm'>
+          <UtilButton
+            tip='Close'
+            onClick={this.handleClose}
+            btnClassName={classes.closeButton}
+          >
+            <CloseIcon />
+          </UtilButton>
+        </Dialog>
       </Fragment>
     )
   }
