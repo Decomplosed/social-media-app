@@ -33,5 +33,5 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(mapStateToProps, { postScream })(
-  withStyles(styles(PostScream))
+  withStyles(styles)(PostScream)
 )
