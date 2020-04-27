@@ -18,6 +18,12 @@ import { postScream } from '../redux/actions/dataActions'
 const styles = {}
 
 class PostScream extends Component {
+  state = {
+    open: false,
+    body: '',
+    errors: {},
+  }
+
   render() {
     return <div></div>
   }
