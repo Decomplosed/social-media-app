@@ -49,6 +49,8 @@ class ScreamDialog extends Component {
       UI: { loading },
     } = this.props
 
+    const { open } = this.state
+
     return (
       <Fragment>
         <UtilButton
