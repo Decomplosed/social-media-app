@@ -124,6 +124,7 @@ export class Scream extends React.Component {
             <ChatIcon color='primary' />
           </UtilButton>
           <span>{commentCount} Comments</span>
+          <ScreamDialog screamId={screamId} userHandle={userHandle} />
         </CardContent>
       </Card>
     )
