@@ -69,8 +69,13 @@ class ScreamDialog extends Component {
             color='primary'
             variant='h5'
             to={`/users/${userHandle}`}
-          ></Typography>
+          >
+            @{userHandle}
+          </Typography>
           <hr className={classes.invisibleSeparator} />
+          <Typography variant='body2' color='textSecondary'>
+            {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
+          </Typography>
         </Grid>
       </Grid>
     )
