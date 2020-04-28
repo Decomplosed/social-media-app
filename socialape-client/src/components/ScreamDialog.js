@@ -35,6 +35,7 @@ class ScreamDialog extends Component {
   }
 
   render() {
+    const { open } = this.state
     const {
       classes,
       scream: {
@@ -49,7 +50,11 @@ class ScreamDialog extends Component {
       UI: { loading },
     } = this.props
 
-    const { open } = this.state
+    const dialogMarkup = loading ? (
+      <CircularProgress size={200} />
+    ) : (
+      <Grid container spacing={16}></Grid>
+    )
 
     return (
       <Fragment>
