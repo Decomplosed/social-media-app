@@ -13,6 +13,7 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
 import CloseIcon from '@material-ui/icons/Close'
+import UnfoldMoreIcon from '@material-ui/icons/UnfoldMore'
 
 import { connect } from 'react-redux'
 import { getScream } from '../redux/actions/dataActions'
