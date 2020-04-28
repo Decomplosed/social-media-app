@@ -20,6 +20,10 @@ import { getScream } from '../redux/actions/dataActions'
 
 const styles = (theme) => ({
   ...theme.globalStyles,
+  invisibleSeparator: {
+    border: 'none',
+    margin: 4,
+  },
 })
 
 class ScreamDialog extends Component {
