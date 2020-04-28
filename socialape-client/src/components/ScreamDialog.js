@@ -14,6 +14,9 @@ import Typography from '@material-ui/core/Typography'
 
 import CloseIcon from '@material-ui/icons/Close'
 
+import { connect } from 'react-redux'
+import { getScream } from '../redux/actions/dataActions'
+
 class ScreamDialog extends Component {
   render() {
     return <div></div>
