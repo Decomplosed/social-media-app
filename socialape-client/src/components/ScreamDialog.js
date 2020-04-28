@@ -18,7 +18,9 @@ import UnfoldMoreIcon from '@material-ui/icons/UnfoldMore'
 import { connect } from 'react-redux'
 import { getScream } from '../redux/actions/dataActions'
 
-const styles = {}
+const styles = (theme) => ({
+  ...theme.globalStyles,
+})
 
 class ScreamDialog extends Component {
   state = {
