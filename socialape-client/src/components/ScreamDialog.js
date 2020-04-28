@@ -76,6 +76,8 @@ class ScreamDialog extends Component {
           <Typography variant='body2' color='textSecondary'>
             {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
           </Typography>
+          <hr className={classes.invisibleSeparator} />
+          <Typography variant='body1'>{body}</Typography>
         </Grid>
       </Grid>
     )
