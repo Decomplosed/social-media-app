@@ -5,6 +5,7 @@ import {
   LOADING_DATA,
   DELETE_SCREAM,
   POST_SCREAM,
+  STOP_LOADING_UI,
 } from '../types'
 
 const initialState = {
