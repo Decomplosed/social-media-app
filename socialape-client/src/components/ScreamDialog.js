@@ -25,6 +25,13 @@ class ScreamDialog extends Component {
   }
 }
 
+ScreamDialog.propTypes = {
+  getScream: PropTypes.func.isRequired,
+  screamId: PropTypes.string.isRequired,
+  userHandle: PropTypes.string.isRequired,
+  scream: PropTypes.object.isRequired,
+}
+
 export default connect(mapStateToProps, { getScream })(
   withStyles(styles)(ScreamDialog)
 )
