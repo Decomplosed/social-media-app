@@ -34,6 +34,20 @@ class ScreamDialog extends Component {
   }
 
   render() {
+    const {
+      classes,
+      scream: {
+        screamId,
+        body,
+        createdAt,
+        likeCount,
+        commentCount,
+        userImage,
+        userHandle,
+      },
+      UI: { loading },
+    } = this.props
+
     return <div></div>
   }
 }
