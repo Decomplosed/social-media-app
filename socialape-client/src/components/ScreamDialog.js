@@ -20,6 +20,10 @@ import { getScream } from '../redux/actions/dataActions'
 const styles = {}
 
 class ScreamDialog extends Component {
+  state = {
+    open: false,
+  }
+
   render() {
     return <div></div>
   }
