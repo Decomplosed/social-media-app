@@ -24,6 +24,10 @@ class ScreamDialog extends Component {
     open: false,
   }
 
+  handleOpen = () => {
+    this.setState({ open: true })
+  }
+
   render() {
     return <div></div>
   }
