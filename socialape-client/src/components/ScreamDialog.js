@@ -66,6 +66,7 @@ class ScreamDialog extends Component {
             variant='h5'
             to={`/users/${userHandle}`}
           ></Typography>
+          <hr className={classes.invisibleSeparator} />
         </Grid>
       </Grid>
     )
