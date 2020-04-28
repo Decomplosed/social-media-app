@@ -32,6 +32,11 @@ ScreamDialog.propTypes = {
   scream: PropTypes.object.isRequired,
 }
 
+const mapStateToProps = (state) => ({
+  scream: state.data.scream,
+  UI: state.UI,
+})
+
 export default connect(mapStateToProps, { getScream })(
   withStyles(styles)(ScreamDialog)
 )
