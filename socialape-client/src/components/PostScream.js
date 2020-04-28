@@ -50,9 +50,7 @@ class PostScream extends Component {
     }
 
     if (!nextProps.UI.errors && !nextProps.UI.loading) {
-      this.setState({ body: '' })
-
-      this.handleClose()
+      this.setState({ body: '', open: false, errors: {} })
     }
   }
 
