@@ -57,6 +57,14 @@ class ScreamDialog extends Component {
         <Grid item sm={5}>
           <img src={userImage} alt='Profile' className={classes.profileImage} />
         </Grid>
+        <Grid item sm={7}>
+          <Typography
+            component={Link}
+            color='primary'
+            variant='h5'
+            to={`/users/${userHandle}`}
+          ></Typography>
+        </Grid>
       </Grid>
     )
 
