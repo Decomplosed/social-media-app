@@ -68,6 +68,9 @@ class ScreamDialog extends Component {
           >
             <CloseIcon />
           </UtilButton>
+          <DialogContent className={classes.dialogContent}>
+            {dialogMarkup}
+          </DialogContent>
         </Dialog>
       </Fragment>
     )
