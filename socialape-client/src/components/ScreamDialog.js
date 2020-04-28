@@ -60,6 +60,15 @@ class ScreamDialog extends Component {
         >
           <UnfoldMoreIcon color='primary' />
         </UtilButton>
+        <Dialog open={open} onClose={this.handleClose} fullWidth maxWidth='sm'>
+          <UtilButton
+            tip='Close'
+            onClick={this.handleClose}
+            btnClassName={classes.closeButton}
+          >
+            <CloseIcon />
+          </UtilButton>
+        </Dialog>
       </Fragment>
     )
   }
