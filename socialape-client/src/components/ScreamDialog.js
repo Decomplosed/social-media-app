@@ -49,7 +49,17 @@ class ScreamDialog extends Component {
       UI: { loading },
     } = this.props
 
-    return <div></div>
+    return (
+      <Fragment>
+        <UtilButton
+          onClick={this.handleOpen}
+          tip='ExpandScream'
+          tipClassName={classes.expandButton}
+        >
+          <UnfoldMoreIcon color='primary' />
+        </UtilButton>
+      </Fragment>
+    )
   }
 }
 
