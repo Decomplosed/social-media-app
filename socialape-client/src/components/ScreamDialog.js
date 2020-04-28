@@ -53,7 +53,11 @@ class ScreamDialog extends Component {
     const dialogMarkup = loading ? (
       <CircularProgress size={200} />
     ) : (
-      <Grid container spacing={16}></Grid>
+      <Grid container spacing={16}>
+        <Grid item sm={5}>
+          <img src={userImage} alt='Profile' className={classes.profileImage} />
+        </Grid>
+      </Grid>
     )
 
     return (
