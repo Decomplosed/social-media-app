@@ -25,4 +25,6 @@ class ScreamDialog extends Component {
   }
 }
 
-export default ScreamDialog
+export default connect(mapStateToProps, { getScream })(
+  withStyles(styles)(ScreamDialog)
+)
