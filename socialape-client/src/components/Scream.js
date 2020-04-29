@@ -75,22 +75,6 @@ export class Scream extends React.Component {
       },
     } = this.props
 
-    const likeButton = !authenticated ? (
-      <UtilButton tip='Like'>
-        <Link to='/login'>
-          <FavoriteBorder colot='primary' />
-        </Link>
-      </UtilButton>
-    ) : this.likedScream() ? (
-      <UtilButton tip='Undo Like' onClick={this.unlikeScream}>
-        <FavoriteIcon color='primary' />
-      </UtilButton>
-    ) : (
-      <UtilButton tip='Like' onClick={this.likeScream}>
-        <FavoriteBorder color='primary' />
-      </UtilButton>
-    )
-
     const deleteButton =
       authenticated && userHandle === handle ? (
         <DeleteScream screamId={screamId} />
