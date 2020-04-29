@@ -103,6 +103,7 @@ class ScreamDialog extends Component {
           </Typography>
           <hr className={classes.invisibleSeparator} />
           <Typography variant='body1'>{body}</Typography>
+          <LikeButton screamId={screamId} />
         </Grid>
       </Grid>
     )
