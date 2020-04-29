@@ -30,6 +30,14 @@ const styles = (theme) => ({
     borderRadius: '50%',
     objectFit: 'cover',
   },
+  dialogContent: {
+    padding: 20,
+  },
+  closeButton: {
+    position: 'absolute',
+    top: '0%',
+    left: '92%',
+  },
 })
 
 class ScreamDialog extends Component {
