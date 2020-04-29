@@ -24,6 +24,12 @@ const styles = (theme) => ({
     border: 'none',
     margin: 4,
   },
+  profileImage: {
+    maxWidth: 200,
+    height: 200,
+    borderRadius: '50%',
+    objectFit: 'cover',
+  },
 })
 
 class ScreamDialog extends Component {
