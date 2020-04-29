@@ -14,7 +14,7 @@ export class LikeButton extends Component {
     if (
       this.props.user.likes &&
       this.props.user.likes.find(
-        (like) => like.screamId === this.props.scream.screamId
+        (like) => like.screamId === this.props.screamId
       )
     )
       return true
@@ -22,11 +22,11 @@ export class LikeButton extends Component {
   }
 
   likeScream = () => {
-    this.props.likeScream(this.props.scream.screamId)
+    this.props.likeScream(this.props.screamId)
   }
 
   unlikeScream = () => {
-    this.props.unlikeScream(this.props.scream.screamId)
+    this.props.unlikeScream(this.props.screamId)
   }
 
   render() {
