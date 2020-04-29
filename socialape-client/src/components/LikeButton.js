@@ -3,6 +3,9 @@ import UtilButton from '../utils/UtilButton'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder'
+import FavoriteIcon from '@material-ui/icons/Favorite'
+
 export class LikeButton extends Component {
   render() {
     const likeButton = !authenticated ? (
