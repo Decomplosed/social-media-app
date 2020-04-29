@@ -14,6 +14,7 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
 import CloseIcon from '@material-ui/icons/Close'
+import ChatIcon from '@material-ui/icons/Chat'
 import UnfoldMoreIcon from '@material-ui/icons/UnfoldMore'
 
 import { connect } from 'react-redux'
