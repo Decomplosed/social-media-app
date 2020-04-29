@@ -7,6 +7,7 @@ import PropTypes from 'prop-types'
 import UtilButton from '../utils/UtilButton'
 import DeleteScream from './DeleteScream'
 import ScreamDialog from './ScreamDialog'
+import LikeButton from './LikeButton'
 
 import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
@@ -80,7 +81,7 @@ export class Scream extends React.Component {
             {dayjs(createdAt).fromNow()}
           </Typography>
           <Typography variant='body1'>{body}</Typography>
-          {likeButton}
+          <LikeButton />
           <span>{likeCount} Likes</span>
           <UtilButton tip='Comments'>
             <ChatIcon color='primary' />
