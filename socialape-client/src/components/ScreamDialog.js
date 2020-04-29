@@ -42,6 +42,10 @@ const styles = (theme) => ({
     position: 'absolute',
     left: '92%',
   },
+  spinnerDiv: {
+    textAlign: 'center',
+    margin: '70px auto',
+  },
 })
 
 class ScreamDialog extends Component {
