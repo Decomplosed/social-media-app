@@ -33,25 +33,6 @@ const styles = {
 }
 
 export class Scream extends React.Component {
-  likedScream = () => {
-    if (
-      this.props.user.likes &&
-      this.props.user.likes.find(
-        (like) => like.screamId === this.props.scream.screamId
-      )
-    )
-      return true
-    else return false
-  }
-
-  likeScream = () => {
-    this.props.likeScream(this.props.scream.screamId)
-  }
-
-  unlikeScream = () => {
-    this.props.unlikeScream(this.props.scream.screamId)
-  }
-
   render() {
     dayjs.extend(relativeTime)
 
