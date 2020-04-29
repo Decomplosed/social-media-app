@@ -104,4 +104,4 @@ const mapStateToProps = (state) => ({
   user: state.user,
 })
 
-export default connect(mapStateToProps, null)(withStyles(styles)(Scream))
+export default connect(mapStateToProps)(withStyles(styles)(Scream))
