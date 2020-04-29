@@ -16,7 +16,6 @@ import Typography from '@material-ui/core/Typography'
 import ChatIcon from '@material-ui/icons/Chat'
 
 import { connect } from 'react-redux'
-import { likeScream, unlikeScream } from '../redux/actions/dataActions'
 
 const styles = {
   card: {
@@ -114,8 +113,6 @@ export class Scream extends React.Component {
 }
 
 Scream.propTypes = {
-  likeScream: PropTypes.func.isRequired,
-  unlikeScream: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
   scream: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired,
@@ -125,12 +122,4 @@ const mapStateToProps = (state) => ({
   user: state.user,
 })
 
-const mapActionsToProps = {
-  likeScream,
-  unlikeScream,
-}
-
-export default connect(
-  mapStateToProps,
-  mapActionsToProps
-)(withStyles(styles)(Scream))
+export default connect(mapStateToProps, null)(withStyles(styles)(Scream))
