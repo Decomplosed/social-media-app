@@ -38,4 +38,4 @@ LikeButton.propTypes = {
   unlikeScream: PropTypes.func.isRequired,
 }
 
-export default LikeButton
+export default connect(mapStateToProps, mapActionsToProps)(LikeButton)
