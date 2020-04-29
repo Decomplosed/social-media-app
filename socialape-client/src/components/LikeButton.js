@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UtilButton from '../utils/UtilButton'
+import { Link } from 'react-router-dom'
 
 export class LikeButton extends Component {
   render() {
