@@ -38,6 +38,10 @@ const styles = (theme) => ({
     top: '0%',
     left: '92%',
   },
+  expandButton: {
+    position: 'absolute',
+    left: '92%',
+  },
 })
 
 class ScreamDialog extends Component {
