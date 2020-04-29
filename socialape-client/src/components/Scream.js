@@ -81,7 +81,7 @@ export class Scream extends React.Component {
             {dayjs(createdAt).fromNow()}
           </Typography>
           <Typography variant='body1'>{body}</Typography>
-          <LikeButton />
+          <LikeButton screamId={screamId} />
           <span>{likeCount} Likes</span>
           <UtilButton tip='Comments'>
             <ChatIcon color='primary' />
