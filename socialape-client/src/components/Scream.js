@@ -82,11 +82,13 @@ export class Scream extends React.Component {
           </Typography>
           <Typography variant='body1'>{body}</Typography>
           <LikeButton screamId={screamId} />
-          <span>{likeCount} likes</span>
+          <span>{`${likeCount} like${likeCount === 1 ? '' : 's'}`}</span>
           <UtilButton tip='Comments'>
             <ChatIcon color='primary' />
           </UtilButton>
-          <span>{commentCount} comments</span>
+          <span>{`${commentCount} comment${
+            commentCount === 1 ? '' : 's'
+          }`}</span>
           <ScreamDialog screamId={screamId} userHandle={userHandle} />
         </CardContent>
       </Card>
