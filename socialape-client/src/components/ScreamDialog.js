@@ -86,7 +86,7 @@ class ScreamDialog extends Component {
       <Fragment>
         <UtilButton
           onClick={this.handleOpen}
-          tip='ExpandScream'
+          tip='Expand Scream'
           tipClassName={classes.expandButton}
         >
           <UnfoldMoreIcon color='primary' />
