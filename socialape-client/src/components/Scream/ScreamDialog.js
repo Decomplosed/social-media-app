@@ -116,6 +116,7 @@ class ScreamDialog extends Component {
             commentCount === 1 ? '' : 's'
           }`}</span>
         </Grid>
+        <Comments comments={comments} />
       </Grid>
     )
 
