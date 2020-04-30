@@ -23,10 +23,6 @@ import { getScream } from '../../redux/actions/dataActions'
 
 const styles = (theme) => ({
   ...theme.globalStyles,
-  invisibleSeparator: {
-    border: 'none',
-    margin: 4,
-  },
   profileImage: {
     maxWidth: 200,
     height: 200,
@@ -116,6 +112,7 @@ class ScreamDialog extends Component {
             commentCount === 1 ? '' : 's'
           }`}</span>
         </Grid>
+        <hr className={classes.visibleSeparator} />
         <Comments comments={comments} />
       </Grid>
     )
