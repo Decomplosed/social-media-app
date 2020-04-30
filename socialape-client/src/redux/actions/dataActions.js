@@ -10,6 +10,7 @@ import {
   SET_ERRORS,
   LOADING_UI,
   STOP_LOADING_UI,
+  SUBMIT_COMMENT,
 } from '../types'
 import axios from 'axios'
 
