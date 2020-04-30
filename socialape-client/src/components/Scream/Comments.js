@@ -17,7 +17,21 @@ export class Comments extends Component {
       <Grid container>
         {comments.map((comment) => {
           const { body, createdAt, userImage, userHandle } = comment
-          return <Fragment></Fragment>
+          return (
+            <Fragment key={createdAt}>
+              <Grid item sm={12}>
+                <Grid container>
+                  <Grid item sm={2}>
+                    <img
+                      src={userImage}
+                      alt='Comment'
+                      className={classes.commentImage}
+                    />
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Fragment>
+          )
         })}
       </Grid>
     )
