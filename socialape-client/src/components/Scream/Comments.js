@@ -44,6 +44,7 @@ export class Comments extends Component {
                         {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
                       </Typography>
                       <hr className={classes.invisibleSeparator} />
+                      <Typography variant='body1'>{body}</Typography>
                     </div>
                   </Grid>
                 </Grid>
