@@ -9,6 +9,12 @@ import Typography from '@material-ui/core/Typography'
 
 const styles = (theme) => ({
   ...theme.globalStyles,
+  commentImage: {
+    maxWidth: '100%',
+    height: 100,
+    objectFit: 'cover',
+    borderRadius: '50%',
+  },
 })
 
 export class Comments extends Component {
