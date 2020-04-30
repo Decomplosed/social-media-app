@@ -5,6 +5,7 @@ import UtilButton from '../../utils/UtilButton'
 import dayjs from 'dayjs'
 import { Link } from 'react-router-dom'
 import LikeButton from './LikeButton'
+import Comments from './Comments'
 
 import Dialog from '@material-ui/core/Dialog'
 import DialogTitle from '@material-ui/core/DialogTitle'
