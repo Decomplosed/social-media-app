@@ -29,6 +29,18 @@ export class Comments extends Component {
                       className={classes.commentImage}
                     />
                   </Grid>
+                  <Grid item sm={9}>
+                    <div className={classes.commentData}>
+                      <Typography
+                        varaint='h5'
+                        component={Link}
+                        to={`/users/${userHandle}`}
+                        color='primary'
+                      >
+                        {userHandle}
+                      </Typography>
+                    </div>
+                  </Grid>
                 </Grid>
               </Grid>
             </Fragment>
