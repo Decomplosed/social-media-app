@@ -38,7 +38,7 @@ const styles = (theme) => ({
   closeButton: {
     position: 'absolute',
     top: '0%',
-    left: '93%',
+    left: '92%',
   },
   expandButton: {
     position: 'absolute',
