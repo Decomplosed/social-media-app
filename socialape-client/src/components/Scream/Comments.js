@@ -58,7 +58,9 @@ export class Comments extends Component {
                   </Grid>
                 </Grid>
               </Grid>
-              <hr className={classes.visibleSeparator} />
+              {index !== comments.length - 1 && (
+                <hr className={classes.visibleSeparator} />
+              )}
             </Fragment>
           )
         })}
