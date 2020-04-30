@@ -40,6 +40,9 @@ export class Comments extends Component {
                       >
                         {userHandle}
                       </Typography>
+                      <Typography variant='body2' color='textSecondary'>
+                        {dayjs(createdAt).format('h:mm a, MMMM DD YYYY')}
+                      </Typography>
                     </div>
                   </Grid>
                 </Grid>
