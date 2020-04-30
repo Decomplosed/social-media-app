@@ -113,6 +113,7 @@ class ScreamDialog extends Component {
           }`}</span>
         </Grid>
         <hr className={classes.visibleSeparator} />
+        <CommentForm screamId={screamId} />
         <Comments comments={comments} />
       </Grid>
     )
