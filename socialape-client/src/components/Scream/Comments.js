@@ -11,6 +11,8 @@ const styles = (theme) => ({
 
 export class Comments extends Component {
   render() {
+    const { comments, classes } = this.props
+
     return <div></div>
   }
 }
