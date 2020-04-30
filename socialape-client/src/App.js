@@ -13,7 +13,7 @@ import { logoutUser, getUserData } from './redux/actions/userActions'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-import Navbar from './components/Navbar'
+import Navbar from './components/Layout/Navbar'
 import AuthRoute from './utils/AuthRoute'
 
 import themeObject from './utils/theme'
