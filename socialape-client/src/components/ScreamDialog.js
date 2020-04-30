@@ -38,11 +38,12 @@ const styles = (theme) => ({
   closeButton: {
     position: 'absolute',
     top: '0%',
-    left: '92%',
+    left: '93%',
   },
   expandButton: {
     position: 'absolute',
-    left: '92%',
+    left: '93%',
+    bottom: '5%',
   },
   spinnerDiv: {
     textAlign: 'center',
