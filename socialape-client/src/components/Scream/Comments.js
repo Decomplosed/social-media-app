@@ -19,4 +19,4 @@ Comments.propTypes = {
   comments: PropTypes.array.isRequired,
 }
 
-export default Comments
+export default withStyles(styles)(Comments)
