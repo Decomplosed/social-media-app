@@ -5,6 +5,9 @@ import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import Typograpghy from '@material-ui/core/Typography'
 
+const styles = (theme) => ({
+  ...theme.globalStyles,
+})
 
 export class Comments extends Component {
   render() {
