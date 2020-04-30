@@ -69,6 +69,8 @@ export const unlikeScream = (screamId) => (dispatch) => {
     .catch((err) => console.log(err))
 }
 
+export const submitComment = (screamId, commentData) => (dispatch) => {}
+
 export const deleteScream = (screamId) => (dispatch) => {
   axios
     .delete(`/scream/${screamId}`)
