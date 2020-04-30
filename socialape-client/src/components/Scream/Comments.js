@@ -15,6 +15,9 @@ const styles = (theme) => ({
     objectFit: 'cover',
     borderRadius: '50%',
   },
+  commentData: {
+    marginLeft: '20px',
+  },
 })
 
 export class Comments extends Component {
