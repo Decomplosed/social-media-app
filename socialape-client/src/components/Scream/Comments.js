@@ -13,7 +13,14 @@ export class Comments extends Component {
   render() {
     const { comments, classes } = this.props
 
-    return <div></div>
+    return (
+      <Grid container>
+        {comments.map((comment) => {
+          const { body, createdAt, userImage, userHandle } = comment
+          return <Fragment></Fragment>
+        })}
+      </Grid>
+    )
   }
 }
 
