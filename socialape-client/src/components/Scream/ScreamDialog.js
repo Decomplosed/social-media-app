@@ -84,7 +84,7 @@ class ScreamDialog extends Component {
         <CircularProgress size={50} />
       </div>
     ) : (
-      <Grid container spacing={16}>
+      <Grid container spacing={0}>
         <Grid item sm={5}>
           <img src={userImage} alt='Profile' className={classes.profileImage} />
         </Grid>

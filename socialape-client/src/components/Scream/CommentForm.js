@@ -40,7 +40,7 @@ class CommentForm extends Component {
     const { errors } = this.state
 
     const commentFormMarkup = authenticated ? (
-      <Grid item sm={12} sytle={{ textAlign: 'center' }}>
+      <Grid item sm={12} style={{ textAlign: 'center' }}>
         <form onSubmit={this.handleSubmit}>
           <TextField
             name='body'
