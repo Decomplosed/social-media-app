@@ -16,11 +16,12 @@ const styles = (theme) => ({
 class CommentForm extends Component {
   state = {
     body: '',
-    errors,
+    errors: [],
   }
 
   render() {
     const { classes, authenticated } = this.props
+    const { errors } = this.state
 
     const commentFormMarkup = authenticated ? (
       <Grid item sm={12} sytle={{ textAlign: 'center' }}>
