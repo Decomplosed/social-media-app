@@ -23,6 +23,11 @@ class CommentForm extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  UI: state.UI,
+  authenticated: state.user.authenticated,
+})
+
 export default connect(mapStateToProps, { submitComment })(
   withStyles(styles)(CommentForm)
 )
