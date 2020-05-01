@@ -36,6 +36,14 @@ class CommentForm extends Component {
             fullWidth
             className={classes.textField}
           />
+          <Button
+            type='submit'
+            variant='contained'
+            color='primary'
+            className={classes.button}
+          >
+            Submit
+          </Button>
         </form>
       </Grid>
     ) : null
