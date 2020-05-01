@@ -23,4 +23,6 @@ class CommentForm extends Component {
   }
 }
 
-export default CommentForm
+export default connect(mapStateToProps, { submitComment })(
+  withStyles(styles)(CommentForm)
+)
