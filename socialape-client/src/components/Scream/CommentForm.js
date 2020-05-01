@@ -16,7 +16,7 @@ const styles = (theme) => ({
 class CommentForm extends Component {
   state = {
     body: '',
-    errors
+    errors,
   }
 
   render() {
@@ -25,7 +25,17 @@ class CommentForm extends Component {
     const commentFormMarkup = authenticated ? (
       <Grid item sm={12} sytle={{ textAlign: 'center' }}>
         <form onSubmit={this.handleSubmit}>
-          <TextField name='body' type='text' label='Comment on scream' error={errors.comment ?  true : false}
+          <TextField
+            name='body'
+            type='text'
+            label='Comment on scream'
+            error={errors.comment ? true : false}
+            helperText={errors.comment}
+            value={this.state.body}
+            onChange={this.handleChange}
+            fullWidth
+            className={classes.textField}
+          />
         </form>
       </Grid>
     ) : null
