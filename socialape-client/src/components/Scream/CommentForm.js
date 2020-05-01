@@ -21,6 +21,7 @@ class CommentForm extends Component {
   render() {
     const { classes, authenticated } = this.props
 
+    const commentFormMarkup = authenticated ? <Grid item sm={12}></Grid> : null
 
     return commentFormMarkup
   }
