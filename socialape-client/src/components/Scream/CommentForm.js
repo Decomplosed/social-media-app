@@ -23,6 +23,14 @@ class CommentForm extends Component {
   }
 }
 
+CommentForm.propTypes = {
+  submitComment: PropTypes.func.isRequired,
+  UI: PropTypes.object.isRequired,
+  authenticated: PropTypes.bool.isRequired,
+  classes: PropTypes.object.isRequired,
+  screamId: PropTypes.string.isRequired,
+}
+
 const mapStateToProps = (state) => ({
   UI: state.UI,
   authenticated: state.user.authenticated,
