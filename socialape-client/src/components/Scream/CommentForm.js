@@ -16,7 +16,7 @@ const styles = (theme) => ({
 class CommentForm extends Component {
   state = {
     body: '',
-    errors: [],
+    errors: {},
   }
 
   componentWillReceiveProps(nextProps) {
