@@ -69,7 +69,15 @@ export const unlikeScream = (screamId) => (dispatch) => {
     .catch((err) => console.log(err))
 }
 
-export const submitComment = (screamId, commentData) => (dispatch) => {}
+export const submitComment = (screamId, commentData) => (dispatch) => {
+  axios.post(`/scream/${screamId}/comment`, commentData).then((res) => {
+    dispatch({
+      type: SUBMIT_COMMENT,
+      payload: res.data,
+    })
+    dispatch(clearErrors())
+  })
+}
 
 export const deleteScream = (screamId) => (dispatch) => {
   axios
