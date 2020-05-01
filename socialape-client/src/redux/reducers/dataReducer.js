@@ -6,6 +6,7 @@ import {
   LOADING_DATA,
   DELETE_SCREAM,
   POST_SCREAM,
+  SUBMIT_COMMENT,
 } from '../types'
 
 const initialState = {
