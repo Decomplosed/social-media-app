@@ -100,7 +100,7 @@ export const getUserData = (userHandle) => (dispatch) => {
     .then((res) => {
       dispatch({ type: SET_SCREAMS, payload: res.data.screams })
     })
-    .catch((err) => {
+    .catch(() => {
       dispatch({ type: SET_SCREAMS, payload: null })
     })
 }
