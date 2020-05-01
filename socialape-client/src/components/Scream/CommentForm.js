@@ -11,6 +11,10 @@ const styles = (theme) => ({
 })
 
 class CommentForm extends Component {
+  state = {
+    body: '',
+  }
+
   render() {
     return <div></div>
   }
