@@ -19,6 +19,10 @@ class CommentForm extends Component {
     errors: [],
   }
 
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
   render() {
     const { classes, authenticated } = this.props
     const { errors } = this.state
