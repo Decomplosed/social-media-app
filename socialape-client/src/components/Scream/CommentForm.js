@@ -23,6 +23,10 @@ class CommentForm extends Component {
     if (nextProps.UI.errors) {
       this.setState({ errors: nextProps.UI.errors })
     }
+
+    if (!nextProps.UI.errors && !nextProps.UI.loading) {
+      this.setState({ body: '' })
+    }
   }
 
   handleChange = (event) => {
