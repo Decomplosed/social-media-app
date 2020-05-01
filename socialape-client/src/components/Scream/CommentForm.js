@@ -19,7 +19,10 @@ class CommentForm extends Component {
   }
 
   render() {
-    return <div></div>
+    const { classes, authenticated } = this.props
+
+
+    return commentFormMarkup
   }
 }
 
