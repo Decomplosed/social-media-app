@@ -163,6 +163,7 @@ const mapActionsToProps = {
   clearErrors,
 }
 
-export default connect(mapStateToProps, { getScream, clearErrors })(
-  withStyles(styles)(ScreamDialog)
-)
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(withStyles(styles)(ScreamDialog))
