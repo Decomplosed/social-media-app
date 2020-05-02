@@ -34,7 +34,7 @@ class User extends Component {
 
   render() {
     const { screams, loading } = this.props.data
-    const { profile } = this.state
+    const { profile, screamIdParam } = this.state
 
     const screamsMarkup = loading ? (
       <p>Loading data...</p>
