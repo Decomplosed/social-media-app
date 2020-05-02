@@ -21,7 +21,67 @@ const StaticProfile = (props) => {
     profile: { handle, createdAt, imageUrl, bio, website, location },
   } = props
 
-  return <div></div>
+  return (
+    <Paper className={classes.paper}>
+      <div className={classes.profile}>
+        <div className='image-wrapper'>
+          <img src={imageUrl} alt='Prfile' className='profile-image' />
+          <input
+            type='file'
+            id='image-input'
+            hidden='hidden'
+            onChange={this.handleImageChange}
+          />
+          <UtilButton
+            tip='Edit Profile Picture'
+            onClick={this.handleEditPicture}
+            btnClassName='button'
+          >
+            <EditIcon color='primary' />
+          </UtilButton>
+        </div>
+        <hr />
+        <div className='profile-details'>
+          <MuiLink
+            component={Link}
+            to={`/users/${handle}`}
+            color='primary'
+            variant='h5'
+          >
+            @{handle}
+          </MuiLink>
+          <hr />
+          {bio && <Typography variant='body2'>{bio}</Typography>}
+          <hr />
+          {location && (
+            <Fragment>
+              <LoactionOn color='primary' /> <span>{location}</span>
+              <hr />
+            </Fragment>
+          )}
+          {website && (
+            <Fragment>
+              <LinkIcon color='primary' />{' '}
+              <a href={website} target='_blank' rel='noopener noreferrer'>
+                {website}
+              </a>
+              <hr />
+            </Fragment>
+          )}
+          <CalendarToday color='primary' />
+          <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
+        </div>
+        <UtilButton
+          tip='Logout'
+          onClick={this.handleLogout}
+          btnClassName='button'
+        >
+          <KeyboardReturn color='primary' />
+        </UtilButton>
+        <EditDetails />
+      </div>
+    </Paper>
+  )
 }
 
 StaticProfile.propTypes = {
