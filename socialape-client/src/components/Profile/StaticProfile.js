@@ -11,6 +11,10 @@ import LocationOn from '@material-ui/icons/LocationOn'
 import LinkIcon from '@material-ui/icons/Link'
 import CalendarToday from '@material-ui/icons/CalendarToday'
 
+const styles = (theme) => ({
+  ...theme.globalStyles,
+})
+
 export class StaticProfile extends Component {
   render() {
     return <div></div>
