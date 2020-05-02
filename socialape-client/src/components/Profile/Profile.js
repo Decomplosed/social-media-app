@@ -9,7 +9,7 @@ import UtilButton from '../../utils/UtilButton'
 import Button from '@material-ui/core/Button'
 import MuiLink from '@material-ui/core/Link'
 
-import LoactionOn from '@material-ui/icons/LocationOn'
+import LocationOn from '@material-ui/icons/LocationOn'
 import LinkIcon from '@material-ui/icons/Link'
 import CalendarToday from '@material-ui/icons/CalendarToday'
 import EditIcon from '@material-ui/icons/Edit'
@@ -89,7 +89,7 @@ class Profile extends Component {
               <hr />
               {location && (
                 <Fragment>
-                  <LoactionOn color='primary' /> <span>{location}</span>
+                  <LocationOn color='primary' /> <span>{location}</span>
                   <hr />
                 </Fragment>
               )}
