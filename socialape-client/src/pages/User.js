@@ -13,8 +13,8 @@ class User extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  data: state.data
+const mapStateToProps = (state) => ({
+  data: state.data,
 })
 
-export default User
+export default connect(mapStateToProps, { getUserData })(User)
