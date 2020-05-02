@@ -16,6 +16,11 @@ const styles = (theme) => ({
 })
 
 const StaticProfile = (props) => {
+  const {
+    classes,
+    profile: { handle, createdAt, imageUrl, bio, website, location },
+  } = props
+
   return <div></div>
 }
 
