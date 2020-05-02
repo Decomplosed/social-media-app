@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles'
 import dayjs from 'dayjs'
@@ -15,10 +15,8 @@ const styles = (theme) => ({
   ...theme.globalStyles,
 })
 
-export class StaticProfile extends Component {
-  render() {
-    return <div></div>
-  }
+const StaticProfile = (props) => {
+  return <div></div>
 }
 
 export default withStyles(styles)(StaticProfile)
