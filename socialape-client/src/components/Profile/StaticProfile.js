@@ -19,4 +19,9 @@ const StaticProfile = (props) => {
   return <div></div>
 }
 
+StaticProfile.propTypes = {
+  profile: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired,
+}
+
 export default withStyles(styles)(StaticProfile)
