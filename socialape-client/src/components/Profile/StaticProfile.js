@@ -21,4 +21,4 @@ export class StaticProfile extends Component {
   }
 }
 
-export default StaticProfile
+export default withStyles(styles)(StaticProfile)
