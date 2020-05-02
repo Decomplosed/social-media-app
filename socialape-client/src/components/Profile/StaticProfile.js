@@ -27,19 +27,6 @@ const StaticProfile = (props) => {
       <div className={classes.profile}>
         <div className='image-wrapper'>
           <img src={imageUrl} alt='Prfile' className='profile-image' />
-          <input
-            type='file'
-            id='image-input'
-            hidden='hidden'
-            onChange={this.handleImageChange}
-          />
-          <UtilButton
-            tip='Edit Profile Picture'
-            onClick={this.handleEditPicture}
-            btnClassName='button'
-          >
-            <EditIcon color='primary' />
-          </UtilButton>
         </div>
         <hr />
         <div className='profile-details'>
@@ -56,7 +43,7 @@ const StaticProfile = (props) => {
           <hr />
           {location && (
             <Fragment>
-              <LoactionOn color='primary' /> <span>{location}</span>
+              <LocationOn color='primary' /> <span>{location}</span>
               <hr />
             </Fragment>
           )}
@@ -72,14 +59,6 @@ const StaticProfile = (props) => {
           <CalendarToday color='primary' />
           <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span>
         </div>
-        <UtilButton
-          tip='Logout'
-          onClick={this.handleLogout}
-          btnClassName='button'
-        >
-          <KeyboardReturn color='primary' />
-        </UtilButton>
-        <EditDetails />
       </div>
     </Paper>
   )
