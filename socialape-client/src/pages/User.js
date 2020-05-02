@@ -35,7 +35,9 @@ class User extends Component {
         <Grid item sm={8} xs={12}>
           {screamsMarkup}
         </Grid>
-        <Grid item sm={4} xs={12}></Grid>
+        <Grid item sm={4} xs={12}>
+          <StaticProfile profile={profile} />
+        </Grid>
       </Grid>
     )
   }
