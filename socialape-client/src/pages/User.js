@@ -11,11 +11,13 @@ import { getUserData } from '../redux/actions/dataActions'
 class User extends Component {
   state = {
     profile: null,
+    screamIdParam: null,
   }
 
   componentDidMount() {
     const handle = this.props.match.params.handle
     const screamId = this.props.match.params.screamId
+
     this.props.getUserData(handle)
 
     axios
