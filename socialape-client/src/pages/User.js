@@ -13,6 +13,11 @@ class User extends Component {
   }
 }
 
+User.propTypes = {
+  getUserData: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+}
+
 const mapStateToProps = (state) => ({
   data: state.data,
 })
