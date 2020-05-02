@@ -9,16 +9,21 @@ import { getUserData } from '../redux/actions/dataActions'
 
 class User extends Component {
   state = {
-    profile: null
+    profile: null,
   }
 
   componentDidMount() {
     const handle = this.props.match.params.handle
     this.props.getUserData(handle)
 
-    axios.get(`/user/${handle}`).then(res => {
-
-    })
+    axios
+      .get(`/user/${handle}`)
+      .then((res) => {
+        this.setState({
+          profile: res.data.user,
+        })
+      })
+      .catch((err) => console.log(err))
   }
 
   render() {
