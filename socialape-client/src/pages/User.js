@@ -30,6 +30,14 @@ class User extends Component {
     const { screams, loading } = this.props.data
     const { profile } = this.state
 
+    const screamsMarkup = loading ? (
+      <p>Loading data...</p>
+    ) : screams === null ? (
+      <p>No screams from this user</p>
+    ) : (
+      screams.map((scream) => <Scream key={scream.screamId} scream={scream} />)
+    )
+
     return (
       <Grid container spacing={6}>
         <Grid item sm={8} xs={12}>
