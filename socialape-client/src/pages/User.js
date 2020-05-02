@@ -15,6 +15,7 @@ class User extends Component {
 
   componentDidMount() {
     const handle = this.props.match.params.handle
+    const screamId = this.props.match.params.screamId
     this.props.getUserData(handle)
 
     axios
