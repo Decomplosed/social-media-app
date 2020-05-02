@@ -8,6 +8,10 @@ import { connect } from 'react-redux'
 import { getUserData } from '../redux/actions/dataActions'
 
 class User extends Component {
+  state = {
+    profile: null
+  }
+
   componentDidMount() {
     const handle = this.props.match.params.handle
     this.props.getUserData(handle)
