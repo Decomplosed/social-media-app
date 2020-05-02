@@ -27,6 +27,8 @@ class User extends Component {
   }
 
   render() {
+    const { screams, loading } = this.props.data
+
     return <div></div>
   }
 }
