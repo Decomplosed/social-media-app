@@ -60,6 +60,8 @@ class ScreamDialog extends Component {
   }
 
   handleOpen = () => {
+    let oldPath = window.location.pathname
+
     this.setState({ open: true })
     this.props.getScream(this.props.screamId)
   }
