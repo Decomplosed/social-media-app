@@ -89,7 +89,11 @@ export class Scream extends React.Component {
           <span>{`${commentCount} comment${
             commentCount === 1 ? '' : 's'
           }`}</span>
-          <ScreamDialog screamId={screamId} userHandle={userHandle} />
+          <ScreamDialog
+            screamId={screamId}
+            userHandle={userHandle}
+            openDialog={this.props.openDialog}
+          />
         </CardContent>
       </Card>
     )
