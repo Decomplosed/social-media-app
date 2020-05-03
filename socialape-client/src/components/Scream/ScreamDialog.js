@@ -51,6 +51,8 @@ const styles = (theme) => ({
 class ScreamDialog extends Component {
   state = {
     open: false,
+    oldPath: '',
+    newPath: '',
   }
 
   componentDidMount() {
