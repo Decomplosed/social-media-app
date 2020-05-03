@@ -74,6 +74,7 @@ class ScreamDialog extends Component {
   }
 
   handleClose = () => {
+    window.history.pushState(null, null, this.state.oldPath)
     this.setState({ open: false })
     this.props.clearErrors()
   }
