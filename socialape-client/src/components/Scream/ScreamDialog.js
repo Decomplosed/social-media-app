@@ -65,6 +65,7 @@ class ScreamDialog extends Component {
     const { userHandle, screamId } = this.props
     const newPath = `/users/${userHandle}/scream/${screamId}`
 
+    window.pushState(null, null, newPath)
 
     this.setState({ open: true })
     this.props.getScream(this.props.screamId)
