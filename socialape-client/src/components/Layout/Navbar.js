@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import PostScream from '../Scream/PostScream'
 import UtilButton from '../../utils/UtilButton'
+import Notifications from './Notifications'
 
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
