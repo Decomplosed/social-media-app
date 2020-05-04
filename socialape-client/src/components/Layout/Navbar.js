@@ -9,7 +9,6 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Button from '@material-ui/core/Button'
 
 import HomeIcon from '@material-ui/icons/Home'
-import Notifications from '@material-ui/icons/Notifications'
 
 import { connect } from 'react-redux'
 
