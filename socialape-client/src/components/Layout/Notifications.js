@@ -23,6 +23,10 @@ export class Notifications extends Component {
     anchorEl: null,
   }
 
+  handleOpen = (event) => {
+    this.setState({ anchorEl: event.target })
+  }
+
   render() {
     const { notifications } = this.props.notifications
     const anchorEl = this.state.anchorEl
