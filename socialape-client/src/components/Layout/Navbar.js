@@ -28,9 +28,7 @@ export class Navbar extends Component {
                   <HomeIcon />
                 </Link>
               </UtilButton>
-              <UtilButton tip='Notifications'>
-                <Notifications />
-              </UtilButton>
+              <Notifications />
             </Fragment>
           ) : (
             <Fragment>
