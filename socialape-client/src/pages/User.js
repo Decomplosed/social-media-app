@@ -4,6 +4,7 @@ import axios from 'axios'
 import Scream from '../components/Scream/Scream'
 import StaticProfile from '../components/Profile/StaticProfile'
 import Grid from '@material-ui/core/Grid'
+import ScreamSkeleton from '../utils/ScreamSkeleton'
 
 import { connect } from 'react-redux'
 import { getUserData } from '../redux/actions/dataActions'
@@ -37,7 +38,7 @@ class User extends Component {
     const { profile, screamIdParam } = this.state
 
     const screamsMarkup = loading ? (
-      <p>Loading data...</p>
+      <ScreamSkeleton />
     ) : screams === null ? (
       <p>No screams from this user</p>
     ) : !screamIdParam ? (

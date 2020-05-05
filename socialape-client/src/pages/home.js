@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 
 import Scream from '../components/Scream/Scream'
 import Profile from '../components/Profile/Profile'
+import ScreamSkeleton from '../utils/ScreamSkeleton'
 
 import { connect } from 'react-redux'
 import { getScreams } from '../redux/actions/dataActions'
@@ -19,7 +20,7 @@ export class Home extends React.Component {
     let recentScreamsMarkup = !loading ? (
       screams.map((scream) => <Scream key={scream.screamId} scream={scream} />)
     ) : (
-      <p>Loading ...</p>
+      <ScreamSkeleton />
     )
 
     return (
