@@ -27,6 +27,25 @@ export class Notifications extends Component {
     const notifications = this.props.notifications
     const anchorEl = this.state.anchorEl
 
+    let notificationsIcon
+    if (notifications && notifications.length > 0) {
+      notifications.filter((notification) => notification.read === false)
+        .length > 0
+        ? (notificationsIcon = (
+            <Badge
+              badgeContent={
+                notifications.filter(
+                  (notification) => notification.read === false
+                ).length
+              }
+              color='secondary'
+            >
+              <NotificationsIcon />
+            </Badge>
+          ))
+        : (notificationsIcon = <NotificationsIcon />)
+    }
+
     return <div></div>
   }
 }
