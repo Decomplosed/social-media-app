@@ -19,6 +19,10 @@ import { connect } from 'react-redux'
 import { markNotificationsRead } from '../../redux/actions/userActions'
 
 export class Notifications extends Component {
+  state = {
+    anchorEl: null,
+  }
+
   render() {
     return <div></div>
   }
