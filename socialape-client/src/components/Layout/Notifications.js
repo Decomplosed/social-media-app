@@ -3,44 +3,39 @@ import { Link } from 'react-router-dom'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import PropTypes from 'prop-types'
-
+// MUI stuff
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import IconButton from '@material-ui/core/IconButton'
 import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import Badge from '@material-ui/core/Badge'
-
+// Icons
 import NotificationsIcon from '@material-ui/icons/Notifications'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import ChatIcon from '@material-ui/icons/Chat'
-
+// Redux
 import { connect } from 'react-redux'
 import { markNotificationsRead } from '../../redux/actions/userActions'
 
-export class Notifications extends Component {
+class Notifications extends Component {
   state = {
     anchorEl: null,
   }
-
   handleOpen = (event) => {
     this.setState({ anchorEl: event.target })
   }
-
   handleClose = () => {
     this.setState({ anchorEl: null })
   }
-
   onMenuOpened = () => {
-    let unreadNotificationIds = this.props.notifications
+    let unreadNotificationsIds = this.props.notifications
       .filter((notification) => !notification.read)
       .map((notification) => notification.notificationId)
-
-    this.props.markNotificationsRead(unreadNotificationIds)
+    this.props.markNotificationsRead(unreadNotificationsIds)
   }
-
   render() {
-    const { notifications } = this.props.notifications
+    const notifications = this.props.notifications
     const anchorEl = this.state.anchorEl
 
     dayjs.extend(relativeTime)
@@ -65,7 +60,6 @@ export class Notifications extends Component {
     } else {
       notificationsIcon = <NotificationsIcon />
     }
-
     let notificationsMarkup =
       notifications && notifications.length > 0 ? (
         notifications.map((notification) => {
@@ -84,7 +78,7 @@ export class Notifications extends Component {
               {icon}
               <Typography
                 component={Link}
-                color='default'
+                color='primary'
                 variant='body1'
                 to={`/users/${notification.recipient}/scream/${notification.screamId}`}
               >
