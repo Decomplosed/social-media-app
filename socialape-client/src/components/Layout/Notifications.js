@@ -31,6 +31,14 @@ export class Notifications extends Component {
     this.setState({ anchorEl: null })
   }
 
+  onMenuOpened = () => {
+    let unreadNotificationIds = this.props.notifications
+      .filter((notification) => !notification.read)
+      .map((notification) => notification.notificationId)
+
+    this.props.markNotificationsRead(unreadNotificationIds)
+  }
+
   render() {
     const { notifications } = this.props.notifications
     const anchorEl = this.state.anchorEl
