@@ -15,6 +15,8 @@ import NotificationsIcon from '@material-ui/icons/Notifications'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import ChatIcon from '@material-ui/icons/Chat'
 
+import { connect } from 'react-redux'
+
 export class Notifications extends Component {
   render() {
     return <div></div>
