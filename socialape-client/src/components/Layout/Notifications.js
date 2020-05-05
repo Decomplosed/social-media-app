@@ -44,9 +44,23 @@ export class Notifications extends Component {
             </Badge>
           ))
         : (notificationsIcon = <NotificationsIcon />)
+    } else {
+      notificationsIcon = <NotificationsIcon />
     }
 
-    return <div></div>
+    return (
+      <Fragment>
+        <Tooltip placement='top' title='Notifications'>
+          <IconButton
+            aria-owns={anchorEl ? 'simple-menu' : undefined}
+            aria-haspopup='true'
+            onClick={this.handleOpen}
+          >
+            {notifications}
+          </IconButton>
+        </Tooltip>
+      </Fragment>
+    )
   }
 }
 
