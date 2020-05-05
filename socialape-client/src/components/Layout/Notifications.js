@@ -28,4 +28,6 @@ export class Notifications extends Component {
   }
 }
 
-export default Notifications
+export default connect(mapStateToProps, { markNotificationsRead })(
+  Notifications
+)
