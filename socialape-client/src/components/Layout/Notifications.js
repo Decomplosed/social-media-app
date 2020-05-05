@@ -11,6 +11,10 @@ import Tooltip from '@material-ui/core/Tooltip'
 import Typography from '@material-ui/core/Typography'
 import Badge from '@material-ui/core/Badge'
 
+import NotificationsIcon from '@material-ui/icons/Notifications'
+import FavoriteIcon from '@material-ui/icons/Favorite'
+import ChatIcon from '@material-ui/icons/Chat'
+
 export class Notifications extends Component {
   render() {
     return <div></div>
