@@ -62,6 +62,20 @@ export class Notifications extends Component {
             ) : (
               <ChatIcon color={iconColor} style={{ marginRight: 10 }} />
             )
+
+          return (
+            <MenuItem key={notification.createdAt} onClick={this.handleClose}>
+              {icon}
+              <Typography
+                component={Link}
+                color='default'
+                variant='body1'
+                to={`/users/${notification.recipient}/scream/${notification.screamId}`}
+              >
+                {notification.sender} {verb} your scream {time}
+              </Typography>
+            </MenuItem>
+          )
         })
       ) : (
         <MenuItem onClick={this.handleClose}>
