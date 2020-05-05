@@ -5,6 +5,7 @@ import {
   LOADING_UI,
   SET_UNAUTHENTICATED,
   LOADING_USER,
+  MARK_NOTIFACTIONS_READ,
 } from '../types'
 import axios from 'axios'
 
