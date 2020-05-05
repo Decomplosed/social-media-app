@@ -5,6 +5,7 @@ import {
   LOADING_USER,
   LIKE_SCREAM,
   UNLIKE_SCREAM,
+  MARK_NOTIFACTIONS_READ,
 } from '../types'
 
 const initialState = {
