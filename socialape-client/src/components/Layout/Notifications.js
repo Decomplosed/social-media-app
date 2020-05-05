@@ -98,7 +98,6 @@ export class Notifications extends Component {
           You have no notifications yet
         </MenuItem>
       )
-
     return (
       <Fragment>
         <Tooltip placement='top' title='Notifications'>
@@ -107,13 +106,13 @@ export class Notifications extends Component {
             aria-haspopup='true'
             onClick={this.handleOpen}
           >
-            {notifications}
+            {notificationsIcon}
           </IconButton>
         </Tooltip>
         <Menu
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
-          onClose={this.handleOpen}
+          onClose={this.handleClose}
           onEntered={this.onMenuOpened}
         >
           {notificationsMarkup}
