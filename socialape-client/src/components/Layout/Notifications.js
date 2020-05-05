@@ -50,6 +50,25 @@ export class Notifications extends Component {
       notificationsIcon = <NotificationsIcon />
     }
 
+    let notificationsMarkup =
+      notifications && notifications.length > 0 ? (
+        notifications.map((notification) => {
+          const verb = notification.type === 'like' ? 'liked' : 'commented on'
+          const time = dayjs(notification.createdAt).fromNow()
+          const iconColor = notification.read ? 'primary' : 'secondary'
+          const icon =
+            notification.type === 'like' ? (
+              <FavoriteIcon color={iconColor} style={{ marginRight: 10 }} />
+            ) : (
+              <ChatIcon color={iconColor} style={{ marginRight: 10 }} />
+            )
+        })
+      ) : (
+        <MenuItem onClick={this.handleClose}>
+          You have no notifications yet
+        </MenuItem>
+      )
+
     return (
       <Fragment>
         <Tooltip placement='top' title='Notifications'>
