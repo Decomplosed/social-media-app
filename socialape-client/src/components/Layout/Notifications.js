@@ -59,6 +59,14 @@ export class Notifications extends Component {
             {notifications}
           </IconButton>
         </Tooltip>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={this.handleOpen}
+          onEntered={this.onMenuOpened}
+        >
+          {notificationsMarkup}
+        </Menu>
       </Fragment>
     )
   }
