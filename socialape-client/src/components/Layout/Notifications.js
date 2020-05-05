@@ -16,6 +16,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite'
 import ChatIcon from '@material-ui/icons/Chat'
 
 import { connect } from 'react-redux'
+import { markNotificationsRead } from '../../redux/actions/userActions'
 
 export class Notifications extends Component {
   render() {
