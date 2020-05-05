@@ -27,6 +27,8 @@ export class Notifications extends Component {
     const notifications = this.props.notifications
     const anchorEl = this.state.anchorEl
 
+    dayjs.extend(relativeTime)
+
     let notificationsIcon
     if (notifications && notifications.length > 0) {
       notifications.filter((notification) => notification.read === false)
