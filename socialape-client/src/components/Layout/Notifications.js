@@ -25,7 +25,8 @@ export class Notifications extends Component {
 
   render() {
     const notifications = this.props.notifications
-    
+    const anchorEl = this.state.anchorEl
+
     return <div></div>
   }
 }
