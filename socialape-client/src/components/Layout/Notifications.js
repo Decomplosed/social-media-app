@@ -24,6 +24,8 @@ export class Notifications extends Component {
   }
 
   render() {
+    const notifications = this.props.notifications
+    
     return <div></div>
   }
 }
