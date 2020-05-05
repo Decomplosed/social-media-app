@@ -27,6 +27,10 @@ export class Notifications extends Component {
     this.setState({ anchorEl: event.target })
   }
 
+  handleClose = () => {
+    this.setState({ anchorEl: null })
+  }
+
   render() {
     const { notifications } = this.props.notifications
     const anchorEl = this.state.anchorEl
