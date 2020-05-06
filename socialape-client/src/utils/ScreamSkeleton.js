@@ -17,7 +17,12 @@ const styles = (theme) => ({
     width: '100%',
     flexDirection: 'column',
     padding: 25
-  }
+  },
+  cover: {
+    minWidth: 200,
+    objectFit: 'cover',
+  },
+  
 })
 
 const ScreamSkeleton = (props) => {
