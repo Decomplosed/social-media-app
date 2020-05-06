@@ -14,7 +14,7 @@ const styles = (theme) => ({
     display: 'flex',
     marginBottom: 20,
   },
-  cardContent: {
+  content: {
     width: '100%',
     flexDirection: 'column',
     padding: 25,
