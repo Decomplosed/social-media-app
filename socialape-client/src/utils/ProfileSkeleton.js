@@ -23,6 +23,12 @@ const styles = (theme) => ({
     width: '100%',
     marginBottom: 10,
   },
+  halfLine: {
+    height: 15,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    width: '50%',
+    marginBottom: 10,
+  },
 })
 
 const ProfileSkeleton = (props) => {
