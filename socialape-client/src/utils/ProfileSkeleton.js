@@ -11,9 +11,15 @@ import CalendarToday from '@material-ui/icons/CalendarToday'
 
 const styles = (theme) => ({
   ...theme.globalStyles,
+  handle: {
+    height: 20,
+    backgroundColor: theme.palette.primary.main,
+    width: 60,
+    margin: '0 auto 7px auto',
+  },
 })
 
-const ProfileSkeleton = () => {
+const ProfileSkeleton = (props) => {
   const { classes } = props
 
   return (
