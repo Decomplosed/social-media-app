@@ -33,7 +33,14 @@ const styles = (theme) => ({
     height: 14,
     width: 100,
     backgroundColor: 'rgba(0,0,0,0.3)',
+    marginBottom: 10
   },
+  fullLine: {
+    height: 15,
+    width: '90%',
+    marginBottom: 10
+  },
+  
 })
 
 const ScreamSkeleton = (props) => {
