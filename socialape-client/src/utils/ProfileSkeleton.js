@@ -6,8 +6,6 @@ import NoImg from '../images/no-img.png'
 import LocationOn from '@material-ui/icons/LocationOn'
 import LinkIcon from '@material-ui/icons/Link'
 import CalendarToday from '@material-ui/icons/CalendarToday'
-import EditIcon from '@material-ui/icons/Edit'
-import KeyboardReturn from '@material-ui/icons/KeyboardReturn'
 
 const styles = (theme) => ({
   ...theme.globalStyles,
@@ -15,6 +13,10 @@ const styles = (theme) => ({
 
 const ProfileSkeleton = () => {
   return <div></div>
+}
+
+ProfileSkeleton.propTypes = {
+  classes: PropTypes.object.isRequired,
 }
 
 export default withStyles(styles)(ProfileSkeleton)
