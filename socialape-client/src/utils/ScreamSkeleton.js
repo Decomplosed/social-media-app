@@ -54,4 +54,4 @@ ScreamSkeleton.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withStyles()(ScreamSkeleton)
+export default withStyles(styles)(ScreamSkeleton)
