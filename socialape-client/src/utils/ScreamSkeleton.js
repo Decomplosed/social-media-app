@@ -9,20 +9,26 @@ import CardContent from '@material-ui/core/CardContent'
 import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = (theme) => ({
+  ...theme,
   card: {
     display: 'flex',
-    marginBottom: 20
+    marginBottom: 20,
   },
   cardContent: {
     width: '100%',
     flexDirection: 'column',
-    padding: 25
+    padding: 25,
   },
   cover: {
     minWidth: 200,
     objectFit: 'cover',
   },
-  
+  handle: {
+    width: 60,
+    height: 20,
+    backgroundColor: theme.palette.primary.main,
+    marginBottom: 7,
+  },
 })
 
 const ScreamSkeleton = (props) => {
