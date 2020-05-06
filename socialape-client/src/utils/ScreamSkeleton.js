@@ -26,6 +26,7 @@ const ScreamSkeleton = (props) => {
     </Card>
   ))
 
+  return <Fragment>{content}</Fragment>
 }
 
 ScreamSkeleton.propTypes = {
