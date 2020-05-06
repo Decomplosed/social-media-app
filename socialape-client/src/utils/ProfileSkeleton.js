@@ -16,7 +16,28 @@ const styles = (theme) => ({
 const ProfileSkeleton = () => {
   const { classes } = props
 
-  return <div></div>
+  return (
+    <Paper className={classes.paper}>
+      <div className={classes.profile}>
+        <div className='image-wrapper'>
+          <img src={NoImg} alt='Profile' className='profile-image' />
+        </div>
+        <hr />
+        <div className='profile-details'>
+          <div className={classes.handle} />
+          <hr />
+          <div className={classes.fullLine} />
+          <div className={classes.fullLine} />
+          <hr />
+          <LocationOn color='primary' /> <span>Location</span>
+          <hr />
+          <LinkIcon color='primary' /> https://website.com
+          <hr />
+          <CalendarToday color='primary' /> Joined date
+        </div>
+      </div>
+    </Paper>
+  )
 }
 
 ProfileSkeleton.propTypes = {
