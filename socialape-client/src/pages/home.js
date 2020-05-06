@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Scream from '../components/Scream/Scream'
 import Profile from '../components/Profile/Profile'
 import ScreamSkeleton from '../utils/ScreamSkeleton'
+import ProfileSkeleton from '../utils/ProfileSkeleton'
 
 import { connect } from 'react-redux'
 import { getScreams } from '../redux/actions/dataActions'
