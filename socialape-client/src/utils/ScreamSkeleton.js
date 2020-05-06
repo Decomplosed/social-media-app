@@ -32,7 +32,7 @@ const styles = (theme) => ({
 })
 
 const ScreamSkeleton = (props) => {
-  const { classes } = this.props
+  const { classes } = props
 
   const content = Array.from({ length: 5 }).map((item, index) => (
     <Card className={classes.card} key={index}>
