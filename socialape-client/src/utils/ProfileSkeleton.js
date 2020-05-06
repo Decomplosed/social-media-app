@@ -9,4 +9,4 @@ const ProfileSkeleton = () => {
   return <div></div>
 }
 
-export default ProfileSkeleton
+export default withStyles(styles)(ProfileSkeleton)
