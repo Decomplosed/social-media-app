@@ -39,13 +39,13 @@ const styles = (theme) => ({
     height: 15,
     width: '90%',
     marginBottom: 10,
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: 'rgba(0,0,0,0.6)',
   },
   halfLine: {
     height: 15,
     width: '50%',
     marginBottom: 10,
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: 'rgba(0,0,0,0.6)',
   },
 })
 
