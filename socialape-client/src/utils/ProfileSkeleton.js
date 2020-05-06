@@ -12,6 +12,8 @@ const styles = (theme) => ({
 })
 
 const ProfileSkeleton = () => {
+  const { classes } = props
+
   return <div></div>
 }
 
