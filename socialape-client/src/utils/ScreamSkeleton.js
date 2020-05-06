@@ -10,7 +10,9 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = (theme) => ({})
 
-const ScreamSkeleton = (props) => {}
+const ScreamSkeleton = (props) => {
+  const { classes } = this.props
+}
 
 SkreamSkeleton.propTypes = {
   classes: PropTypes.object.isRequired,
