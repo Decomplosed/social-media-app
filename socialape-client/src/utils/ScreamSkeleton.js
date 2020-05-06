@@ -29,6 +29,11 @@ const styles = (theme) => ({
     backgroundColor: theme.palette.primary.main,
     marginBottom: 7,
   },
+  date: {
+    height: 14,
+    width: 100,
+    backgroundColor: 'rgba(0,0,0,0.3)',
+  },
 })
 
 const ScreamSkeleton = (props) => {
