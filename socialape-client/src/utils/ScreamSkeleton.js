@@ -10,4 +10,8 @@ import withStyles from '@material-ui/core/styles/withStyles'
 
 const ScreamSkeleton = (props) => {}
 
+SkreamSkeleton.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
 export default ScreamSkeleton
