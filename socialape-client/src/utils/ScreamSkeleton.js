@@ -8,7 +8,12 @@ import CardContent from '@material-ui/core/CardContent'
 
 import withStyles from '@material-ui/core/styles/withStyles'
 
-const styles = (theme) => ({})
+const styles = (theme) => ({
+  card: {
+    display: 'flex',
+    marginBottom: 20
+  },
+})
 
 const ScreamSkeleton = (props) => {
   const { classes } = this.props
