@@ -17,6 +17,12 @@ const styles = (theme) => ({
     width: 60,
     margin: '0 auto 7px auto',
   },
+  fullLine: {
+    height: 15,
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    width: '100%',
+    marginBottom: 10,
+  },
 })
 
 const ProfileSkeleton = (props) => {
